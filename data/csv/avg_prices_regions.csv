@@ -1,0 +1,638 @@
+region,year,price,type
+Česká republika,2019,34513,Rodinné domy
+Hlavní město Praha,2019,65815,Rodinné domy
+Středočeský kraj,2019,42935,Rodinné domy
+Benešov,2019,33086,Rodinné domy
+Beroun,2019,36014,Rodinné domy
+Kladno,2019,34993,Rodinné domy
+Kolín,2019,30355,Rodinné domy
+Kutná Hora,2019,29307,Rodinné domy
+Mělník,2019,34023,Rodinné domy
+Mladá Boleslav,2019,34668,Rodinné domy
+Nymburk,2019,28524,Rodinné domy
+Praha-východ,2019,55763,Rodinné domy
+Praha-západ,2019,56992,Rodinné domy
+Příbram,2019,29090,Rodinné domy
+Rakovník,2019,26638,Rodinné domy
+Jihočeský kraj,2019,30287,Rodinné domy
+České Budějovice,2019,35898,Rodinné domy
+Český Krumlov,2019,28417,Rodinné domy
+Jindřichův Hradec,2019,25147,Rodinné domy
+Písek,2019,29225,Rodinné domy
+Prachatice,2019,23403,Rodinné domy
+Strakonice,2019,28293,Rodinné domy
+Tábor,2019,25615,Rodinné domy
+Plzeňský kraj,2019,30845,Rodinné domy
+Domažlice,2019,26860,Rodinné domy
+Klatovy,2019,24009,Rodinné domy
+Plzeň-jih,2019,25284,Rodinné domy
+Plzeň-město,2019,42972,Rodinné domy
+Plzeň-sever,2019,29345,Rodinné domy
+Rokycany,2019,26963,Rodinné domy
+Tachov,2019,28145,Rodinné domy
+Karlovarský kraj,2019,25415,Rodinné domy
+Cheb,2019,26666,Rodinné domy
+Karlovy Vary,2019,27472,Rodinné domy
+Sokolov,2019,21422,Rodinné domy
+Ústecký kraj,2019,25357,Rodinné domy
+Děčín,2019,23444,Rodinné domy
+Chomutov,2019,25107,Rodinné domy
+Litoměřice,2019,22479,Rodinné domy
+Louny,2019,25554,Rodinné domy
+Most,2019,30608,Rodinné domy
+Teplice,2019,28224,Rodinné domy
+Ústí nad Labem,2019,29981,Rodinné domy
+Liberecký kraj,2019,30149,Rodinné domy
+Česká Lípa,2019,26473,Rodinné domy
+Jablonec nad Nisou,2019,28247,Rodinné domy
+Liberec,2019,34416,Rodinné domy
+Semily,2019,25784,Rodinné domy
+Královéhradecký kraj,2019,30327,Rodinné domy
+Hradec Králové,2019,37321,Rodinné domy
+Jičín,2019,26423,Rodinné domy
+Náchod,2019,26008,Rodinné domy
+Rychnov nad Kněžnou,2019,27806,Rodinné domy
+Trutnov,2019,27657,Rodinné domy
+Pardubický kraj,2019,29817,Rodinné domy
+Chrudim,2019,25689,Rodinné domy
+Pardubice,2019,37083,Rodinné domy
+Svitavy,2019,27555,Rodinné domy
+Ústí nad Orlicí,2019,26060,Rodinné domy
+Kraj Vysočina,2019,28721,Rodinné domy
+Havlíčkův Brod,2019,26896,Rodinné domy
+Jihlava,2019,34462,Rodinné domy
+Pelhřimov,2019,26071,Rodinné domy
+Třebíč,2019,25433,Rodinné domy
+Žďár nad Sázavou,2019,26326,Rodinné domy
+Jihomoravský kraj,2019,33430,Rodinné domy
+Blansko,2019,29177,Rodinné domy
+Brno-město,2019,52142,Rodinné domy
+Brno-venkov,2019,33348,Rodinné domy
+Břeclav,2019,27642,Rodinné domy
+Hodonín,2019,25633,Rodinné domy
+Vyškov,2019,28802,Rodinné domy
+Znojmo,2019,28994,Rodinné domy
+Olomoucký kraj,2019,25538,Rodinné domy
+Jeseník,2019,18877,Rodinné domy
+Olomouc,2019,30537,Rodinné domy
+Prostějov,2019,24561,Rodinné domy
+Přerov,2019,22567,Rodinné domy
+Šumperk,2019,23326,Rodinné domy
+Zlínský kraj,2019,24666,Rodinné domy
+Kroměříž,2019,21601,Rodinné domy
+Uherské Hradiště,2019,22809,Rodinné domy
+Vsetín,2019,24345,Rodinné domy
+Zlín,2019,28342,Rodinné domy
+Moravskoslezský kraj,2019,28521,Rodinné domy
+Bruntál,2019,22560,Rodinné domy
+Frýdek-Místek,2019,29665,Rodinné domy
+Karviná,2019,28128,Rodinné domy
+Nový Jičín,2019,26407,Rodinné domy
+Opava,2019,27186,Rodinné domy
+Ostrava-město,2019,35267,Rodinné domy
+Česká republika,2020,37244,Rodinné domy
+Hlavní město Praha,2020,79703,Rodinné domy
+Středočeský kraj,2020,47670,Rodinné domy
+Benešov,2020,35006,Rodinné domy
+Beroun,2020,43155,Rodinné domy
+Kladno,2020,41004,Rodinné domy
+Kolín,2020,35025,Rodinné domy
+Kutná Hora,2020,33010,Rodinné domy
+Mělník,2020,36815,Rodinné domy
+Mladá Boleslav,2020,38659,Rodinné domy
+Nymburk,2020,30407,Rodinné domy
+Praha-východ,2020,64587,Rodinné domy
+Praha-západ,2020,63822,Rodinné domy
+Příbram,2020,32368,Rodinné domy
+Rakovník,2020,31163,Rodinné domy
+Jihočeský kraj,2020,33414,Rodinné domy
+České Budějovice,2020,38666,Rodinné domy
+Český Krumlov,2020,30159,Rodinné domy
+Jindřichův Hradec,2020,29854,Rodinné domy
+Písek,2020,27815,Rodinné domy
+Prachatice,2020,29571,Rodinné domy
+Strakonice,2020,30078,Rodinné domy
+Tábor,2020,32778,Rodinné domy
+Plzeňský kraj,2020,32923,Rodinné domy
+Domažlice,2020,24906,Rodinné domy
+Klatovy,2020,29315,Rodinné domy
+Plzeň-jih,2020,28978,Rodinné domy
+Plzeň-město,2020,46606,Rodinné domy
+Plzeň-sever,2020,31522,Rodinné domy
+Rokycany,2020,30071,Rodinné domy
+Tachov,2020,26723,Rodinné domy
+Karlovarský kraj,2020,28661,Rodinné domy
+Cheb,2020,28201,Rodinné domy
+Karlovy Vary,2020,32215,Rodinné domy
+Sokolov,2020,25953,Rodinné domy
+Ústecký kraj,2020,28258,Rodinné domy
+Děčín,2020,26182,Rodinné domy
+Chomutov,2020,28689,Rodinné domy
+Litoměřice,2020,26040,Rodinné domy
+Louny,2020,25824,Rodinné domy
+Most,2020,32284,Rodinné domy
+Teplice,2020,30440,Rodinné domy
+Ústí nad Labem,2020,40271,Rodinné domy
+Liberecký kraj,2020,34316,Rodinné domy
+Česká Lípa,2020,31146,Rodinné domy
+Jablonec nad Nisou,2020,32233,Rodinné domy
+Liberec,2020,38720,Rodinné domy
+Semily,2020,28287,Rodinné domy
+Královéhradecký kraj,2020,32374,Rodinné domy
+Hradec Králové,2020,39379,Rodinné domy
+Jičín,2020,25522,Rodinné domy
+Náchod,2020,27690,Rodinné domy
+Rychnov nad Kněžnou,2020,30091,Rodinné domy
+Trutnov,2020,31147,Rodinné domy
+Pardubický kraj,2020,30526,Rodinné domy
+Chrudim,2020,29345,Rodinné domy
+Pardubice,2020,41509,Rodinné domy
+Svitavy,2020,26190,Rodinné domy
+Ústí nad Orlicí,2020,27441,Rodinné domy
+Kraj Vysočina,2020,30393,Rodinné domy
+Havlíčkův Brod,2020,29353,Rodinné domy
+Jihlava,2020,35019,Rodinné domy
+Pelhřimov,2020,28674,Rodinné domy
+Třebíč,2020,26434,Rodinné domy
+Žďár nad Sázavou,2020,31033,Rodinné domy
+Jihomoravský kraj,2020,35685,Rodinné domy
+Blansko,2020,29293,Rodinné domy
+Brno-město,2020,53555,Rodinné domy
+Brno-venkov,2020,35423,Rodinné domy
+Břeclav,2020,33451,Rodinné domy
+Hodonín,2020,26377,Rodinné domy
+Vyškov,2020,32893,Rodinné domy
+Znojmo,2020,30245,Rodinné domy
+Olomoucký kraj,2020,27107,Rodinné domy
+Jeseník,2020,24985,Rodinné domy
+Olomouc,2020,31923,Rodinné domy
+Prostějov,2020,25912,Rodinné domy
+Přerov,2020,23870,Rodinné domy
+Šumperk,2020,24726,Rodinné domy
+Zlínský kraj,2020,28130,Rodinné domy
+Kroměříž,2020,23230,Rodinné domy
+Uherské Hradiště,2020,27113,Rodinné domy
+Vsetín,2020,28406,Rodinné domy
+Zlín,2020,31353,Rodinné domy
+Moravskoslezský kraj,2020,30126,Rodinné domy
+Bruntál,2020,24681,Rodinné domy
+Frýdek-Místek,2020,30133,Rodinné domy
+Karviná,2020,29428,Rodinné domy
+Nový Jičín,2020,27285,Rodinné domy
+Opava,2020,30572,Rodinné domy
+Ostrava-město,2020,36098,Rodinné domy
+Česká republika,2021,43044,Rodinné domy
+Hlavní město Praha,2021,95870,Rodinné domy
+Středočeský kraj,2021,58253,Rodinné domy
+Benešov,2021,42116,Rodinné domy
+Beroun,2021,39834,Rodinné domy
+Kladno,2021,45682,Rodinné domy
+Kolín,2021,40185,Rodinné domy
+Kutná Hora,2021,39348,Rodinné domy
+Mělník,2021,42162,Rodinné domy
+Mladá Boleslav,2021,40576,Rodinné domy
+Nymburk,2021,39148,Rodinné domy
+Praha-východ,2021,82717,Rodinné domy
+Praha-západ,2021,76225,Rodinné domy
+Příbram,2021,41104,Rodinné domy
+Rakovník,2021,38461,Rodinné domy
+Jihočeský kraj,2021,39495,Rodinné domy
+České Budějovice,2021,46406,Rodinné domy
+Český Krumlov,2021,41795,Rodinné domy
+Jindřichův Hradec,2021,36801,Rodinné domy
+Písek,2021,29531,Rodinné domy
+Prachatice,2021,33644,Rodinné domy
+Strakonice,2021,35142,Rodinné domy
+Tábor,2021,35522,Rodinné domy
+Plzeňský kraj,2021,39338,Rodinné domy
+Domažlice,2021,34020,Rodinné domy
+Klatovy,2021,36723,Rodinné domy
+Plzeň-jih,2021,33410,Rodinné domy
+Plzeň-město,2021,59169,Rodinné domy
+Plzeň-sever,2021,39441,Rodinné domy
+Rokycany,2021,34141,Rodinné domy
+Tachov,2021,34264,Rodinné domy
+Karlovarský kraj,2021,32743,Rodinné domy
+Cheb,2021,28452,Rodinné domy
+Karlovy Vary,2021,36743,Rodinné domy
+Sokolov,2021,32228,Rodinné domy
+Ústecký kraj,2021,32157,Rodinné domy
+Děčín,2021,30544,Rodinné domy
+Chomutov,2021,33693,Rodinné domy
+Litoměřice,2021,33211,Rodinné domy
+Louny,2021,26577,Rodinné domy
+Most,2021,36548,Rodinné domy
+Teplice,2021,34607,Rodinné domy
+Ústí nad Labem,2021,38977,Rodinné domy
+Liberecký kraj,2021,39535,Rodinné domy
+Česká Lípa,2021,34111,Rodinné domy
+Jablonec nad Nisou,2021,35877,Rodinné domy
+Liberec,2021,44406,Rodinné domy
+Semily,2021,35630,Rodinné domy
+Královéhradecký kraj,2021,37787,Rodinné domy
+Hradec Králové,2021,48667,Rodinné domy
+Jičín,2021,33988,Rodinné domy
+Náchod,2021,31070,Rodinné domy
+Rychnov nad Kněžnou,2021,33325,Rodinné domy
+Trutnov,2021,35148,Rodinné domy
+Pardubický kraj,2021,36512,Rodinné domy
+Chrudim,2021,34266,Rodinné domy
+Pardubice,2021,44351,Rodinné domy
+Svitavy,2021,34945,Rodinné domy
+Ústí nad Orlicí,2021,35104,Rodinné domy
+Kraj Vysočina,2021,35732,Rodinné domy
+Havlíčkův Brod,2021,33881,Rodinné domy
+Jihlava,2021,39886,Rodinné domy
+Pelhřimov,2021,34962,Rodinné domy
+Třebíč,2021,33178,Rodinné domy
+Žďár nad Sázavou,2021,36999,Rodinné domy
+Jihomoravský kraj,2021,42844,Rodinné domy
+Blansko,2021,38019,Rodinné domy
+Brno-město,2021,66229,Rodinné domy
+Brno-venkov,2021,41565,Rodinné domy
+Břeclav,2021,37851,Rodinné domy
+Hodonín,2021,34099,Rodinné domy
+Vyškov,2021,38000,Rodinné domy
+Znojmo,2021,33475,Rodinné domy
+Olomoucký kraj,2021,32519,Rodinné domy
+Jeseník,2021,27542,Rodinné domy
+Olomouc,2021,36587,Rodinné domy
+Prostějov,2021,32338,Rodinné domy
+Přerov,2021,29046,Rodinné domy
+Šumperk,2021,31846,Rodinné domy
+Zlínský kraj,2021,31795,Rodinné domy
+Kroměříž,2021,29126,Rodinné domy
+Uherské Hradiště,2021,29317,Rodinné domy
+Vsetín,2021,31957,Rodinné domy
+Zlín,2021,36421,Rodinné domy
+Moravskoslezský kraj,2021,34984,Rodinné domy
+Bruntál,2021,27421,Rodinné domy
+Frýdek-Místek,2021,36335,Rodinné domy
+Karviná,2021,34500,Rodinné domy
+Nový Jičín,2021,32989,Rodinné domy
+Opava,2021,34350,Rodinné domy
+Ostrava-město,2021,42476,Rodinné domy
+Česká republika,2022,49782,Rodinné domy
+Hlavní město Praha,2022,105434,Rodinné domy
+Středočeský kraj,2022,66053,Rodinné domy
+Benešov,2022,50121,Rodinné domy
+Beroun,2022,46145,Rodinné domy
+Kladno,2022,53076,Rodinné domy
+Kolín,2022,45220,Rodinné domy
+Kutná Hora,2022,38291,Rodinné domy
+Mělník,2022,48595,Rodinné domy
+Mladá Boleslav,2022,46381,Rodinné domy
+Nymburk,2022,44666,Rodinné domy
+Praha-východ,2022,96276,Rodinné domy
+Praha-západ,2022,95020,Rodinné domy
+Příbram,2022,43076,Rodinné domy
+Rakovník,2022,41744,Rodinné domy
+Jihočeský kraj,2022,47320,Rodinné domy
+České Budějovice,2022,57436,Rodinné domy
+Český Krumlov,2022,41085,Rodinné domy
+Jindřichův Hradec,2022,44521,Rodinné domy
+Písek,2022,40710,Rodinné domy
+Prachatice,2022,47947,Rodinné domy
+Strakonice,2022,41572,Rodinné domy
+Tábor,2022,43611,Rodinné domy
+Plzeňský kraj,2022,43989,Rodinné domy
+Domažlice,2022,38815,Rodinné domy
+Klatovy,2022,39782,Rodinné domy
+Plzeň-jih,2022,39518,Rodinné domy
+Plzeň-město,2022,69874,Rodinné domy
+Plzeň-sever,2022,43797,Rodinné domy
+Rokycany,2022,37307,Rodinné domy
+Tachov,2022,40015,Rodinné domy
+Karlovarský kraj,2022,38860,Rodinné domy
+Cheb,2022,36655,Rodinné domy
+Karlovy Vary,2022,45539,Rodinné domy
+Sokolov,2022,35051,Rodinné domy
+Ústecký kraj,2022,39170,Rodinné domy
+Děčín,2022,35316,Rodinné domy
+Chomutov,2022,40709,Rodinné domy
+Litoměřice,2022,38430,Rodinné domy
+Louny,2022,39427,Rodinné domy
+Most,2022,40649,Rodinné domy
+Teplice,2022,39699,Rodinné domy
+Ústí nad Labem,2022,47885,Rodinné domy
+Liberecký kraj,2022,47752,Rodinné domy
+Česká Lípa,2022,43822,Rodinné domy
+Jablonec nad Nisou,2022,45619,Rodinné domy
+Liberec,2022,52313,Rodinné domy
+Semily,2022,42283,Rodinné domy
+Královéhradecký kraj,2022,45583,Rodinné domy
+Hradec Králové,2022,58264,Rodinné domy
+Jičín,2022,41375,Rodinné domy
+Náchod,2022,36420,Rodinné domy
+Rychnov nad Kněžnou,2022,44802,Rodinné domy
+Trutnov,2022,41626,Rodinné domy
+Pardubický kraj,2022,42356,Rodinné domy
+Chrudim,2022,40267,Rodinné domy
+Pardubice,2022,57189,Rodinné domy
+Svitavy,2022,39633,Rodinné domy
+Ústí nad Orlicí,2022,38079,Rodinné domy
+Kraj Vysočina,2022,41874,Rodinné domy
+Havlíčkův Brod,2022,41926,Rodinné domy
+Jihlava,2022,49102,Rodinné domy
+Pelhřimov,2022,38557,Rodinné domy
+Třebíč,2022,39139,Rodinné domy
+Žďár nad Sázavou,2022,39887,Rodinné domy
+Jihomoravský kraj,2022,47816,Rodinné domy
+Blansko,2022,41013,Rodinné domy
+Brno-město,2022,74250,Rodinné domy
+Brno-venkov,2022,46032,Rodinné domy
+Břeclav,2022,42812,Rodinné domy
+Hodonín,2022,37531,Rodinné domy
+Vyškov,2022,42683,Rodinné domy
+Znojmo,2022,41655,Rodinné domy
+Olomoucký kraj,2022,38838,Rodinné domy
+Jeseník,2022,34150,Rodinné domy
+Olomouc,2022,42785,Rodinné domy
+Prostějov,2022,38702,Rodinné domy
+Přerov,2022,35096,Rodinné domy
+Šumperk,2022,39304,Rodinné domy
+Zlínský kraj,2022,39362,Rodinné domy
+Kroměříž,2022,34984,Rodinné domy
+Uherské Hradiště,2022,36541,Rodinné domy
+Vsetín,2022,40363,Rodinné domy
+Zlín,2022,44439,Rodinné domy
+Moravskoslezský kraj,2022,41647,Rodinné domy
+Bruntál,2022,33690,Rodinné domy
+Frýdek-Místek,2022,44614,Rodinné domy
+Karviná,2022,41806,Rodinné domy
+Nový Jičín,2022,37506,Rodinné domy
+Opava,2022,40495,Rodinné domy
+Ostrava-město,2022,49908,Rodinné domy
+Česká republika,2023,48596,Rodinné domy
+Hlavní město Praha,2023,111087,Rodinné domy
+Středočeský kraj,2023,64031,Rodinné domy
+Benešov,2023,43268,Rodinné domy
+Beroun,2023,52179,Rodinné domy
+Kladno,2023,52323,Rodinné domy
+Kolín,2023,46053,Rodinné domy
+Kutná Hora,2023,51510,Rodinné domy
+Mělník,2023,49340,Rodinné domy
+Mladá Boleslav,2023,47913,Rodinné domy
+Nymburk,2023,45054,Rodinné domy
+Praha-východ,2023,88141,Rodinné domy
+Praha-západ,2023,89694,Rodinné domy
+Příbram,2023,44672,Rodinné domy
+Rakovník,2023,41213,Rodinné domy
+Jihočeský kraj,2023,45525,Rodinné domy
+České Budějovice,2023,53362,Rodinné domy
+Český Krumlov,2023,47101,Rodinné domy
+Jindřichův Hradec,2023,38302,Rodinné domy
+Písek,2023,40988,Rodinné domy
+Prachatice,2023,34261,Rodinné domy
+Strakonice,2023,36961,Rodinné domy
+Tábor,2023,47061,Rodinné domy
+Plzeňský kraj,2023,44192,Rodinné domy
+Domažlice,2023,39139,Rodinné domy
+Klatovy,2023,42230,Rodinné domy
+Plzeň-jih,2023,41220,Rodinné domy
+Plzeň-město,2023,63422,Rodinné domy
+Plzeň-sever,2023,42091,Rodinné domy
+Rokycany,2023,42570,Rodinné domy
+Tachov,2023,38242,Rodinné domy
+Karlovarský kraj,2023,37335,Rodinné domy
+Cheb,2023,35437,Rodinné domy
+Karlovy Vary,2023,42750,Rodinné domy
+Sokolov,2023,34964,Rodinné domy
+Ústecký kraj,2023,38348,Rodinné domy
+Děčín,2023,35977,Rodinné domy
+Chomutov,2023,40632,Rodinné domy
+Litoměřice,2023,36565,Rodinné domy
+Louny,2023,33299,Rodinné domy
+Most,2023,41441,Rodinné domy
+Teplice,2023,44666,Rodinné domy
+Ústí nad Labem,2023,48345,Rodinné domy
+Liberecký kraj,2023,46566,Rodinné domy
+Česká Lípa,2023,38159,Rodinné domy
+Jablonec nad Nisou,2023,43396,Rodinné domy
+Liberec,2023,52824,Rodinné domy
+Semily,2023,40238,Rodinné domy
+Královéhradecký kraj,2023,46624,Rodinné domy
+Hradec Králové,2023,56479,Rodinné domy
+Jičín,2023,41667,Rodinné domy
+Náchod,2023,42506,Rodinné domy
+Rychnov nad Kněžnou,2023,41554,Rodinné domy
+Trutnov,2023,42593,Rodinné domy
+Pardubický kraj,2023,40448,Rodinné domy
+Chrudim,2023,38223,Rodinné domy
+Pardubice,2023,56311,Rodinné domy
+Svitavy,2023,34701,Rodinné domy
+Ústí nad Orlicí,2023,38972,Rodinné domy
+Kraj Vysočina,2023,40933,Rodinné domy
+Havlíčkův Brod,2023,41200,Rodinné domy
+Jihlava,2023,46320,Rodinné domy
+Pelhřimov,2023,36032,Rodinné domy
+Třebíč,2023,37021,Rodinné domy
+Žďár nad Sázavou,2023,41317,Rodinné domy
+Jihomoravský kraj,2023,49904,Rodinné domy
+Blansko,2023,40423,Rodinné domy
+Brno-město,2023,78210,Rodinné domy
+Brno-venkov,2023,48034,Rodinné domy
+Břeclav,2023,43764,Rodinné domy
+Hodonín,2023,37517,Rodinné domy
+Vyškov,2023,43102,Rodinné domy
+Znojmo,2023,44419,Rodinné domy
+Olomoucký kraj,2023,38418,Rodinné domy
+Jeseník,2023,33760,Rodinné domy
+Olomouc,2023,46780,Rodinné domy
+Prostějov,2023,37939,Rodinné domy
+Přerov,2023,34180,Rodinné domy
+Šumperk,2023,36311,Rodinné domy
+Zlínský kraj,2023,37219,Rodinné domy
+Kroměříž,2023,34785,Rodinné domy
+Uherské Hradiště,2023,33049,Rodinné domy
+Vsetín,2023,39261,Rodinné domy
+Zlín,2023,42755,Rodinné domy
+Moravskoslezský kraj,2023,41462,Rodinné domy
+Bruntál,2023,34733,Rodinné domy
+Frýdek-Místek,2023,42853,Rodinné domy
+Karviná,2023,38069,Rodinné domy
+Nový Jičín,2023,40521,Rodinné domy
+Opava,2023,38791,Rodinné domy
+Ostrava-město,2023,53006,Rodinné domy
+Česká republika,2019,39306,Rodinné domy
+Hlavní město Praha,2019,76391,Rodinné domy
+Středočeský kraj,2019,31208,Rodinné domy
+Benešov,2019,28649,Rodinné domy
+Beroun,2019,32338,Rodinné domy
+Kladno,2019,37796,Rodinné domy
+Kolín,2019,27940,Rodinné domy
+Kutná Hora,2019,25929,Rodinné domy
+Mělník,2019,32149,Rodinné domy
+Mladá Boleslav,2019,28871,Rodinné domy
+Nymburk,2019,31373,Rodinné domy
+Praha-východ,2019,31395,Rodinné domy
+Praha-západ,2019,31630,Rodinné domy
+Příbram,2019,28186,Rodinné domy
+Rakovník,2019,28820,Rodinné domy
+Jihočeský kraj,2019,27412,Rodinné domy
+České Budějovice,2019,34592,Rodinné domy
+Český Krumlov,2019,23614,Rodinné domy
+Jindřichův Hradec,2019,21557,Rodinné domy
+Písek,2019,22930,Rodinné domy
+Prachatice,2019,17905,Rodinné domy
+Strakonice,2019,22643,Rodinné domy
+Tábor,2019,24477,Rodinné domy
+Plzeňský kraj,2019,31302,Rodinné domy
+Domažlice,2019,24174,Rodinné domy
+Klatovy,2019,22418,Rodinné domy
+Plzeň-jih,2019,23444,Rodinné domy
+Plzeň-město,2019,38769,Rodinné domy
+Plzeň-sever,2019,25587,Rodinné domy
+Rokycany,2019,27231,Rodinné domy
+Tachov,2019,22370,Rodinné domy
+Karlovarský kraj,2019,21256,Rodinné domy
+Cheb,2019,21792,Rodinné domy
+Karlovy Vary,2019,22642,Rodinné domy
+Sokolov,2019,16554,Rodinné domy
+Ústecký kraj,2019,19954,Rodinné domy
+Děčín,2019,18427,Rodinné domy
+Chomutov,2019,16246,Rodinné domy
+Litoměřice,2019,24073,Rodinné domy
+Louny,2019,19348,Rodinné domy
+Most,2019,18696,Rodinné domy
+Teplice,2019,19242,Rodinné domy
+Ústí nad Labem,2019,22872,Rodinné domy
+Liberecký kraj,2019,27554,Rodinné domy
+Česká Lípa,2019,20109,Rodinné domy
+Jablonec nad Nisou,2019,24879,Rodinné domy
+Liberec,2019,32644,Rodinné domy
+Semily,2019,24343,Rodinné domy
+Královéhradecký kraj,2019,28075,Rodinné domy
+Hradec Králové,2019,38025,Rodinné domy
+Jičín,2019,27932,Rodinné domy
+Náchod,2019,20244,Rodinné domy
+Rychnov nad Kněžnou,2019,25913,Rodinné domy
+Trutnov,2019,22317,Rodinné domy
+Pardubický kraj,2019,28985,Rodinné domy
+Chrudim,2019,24370,Rodinné domy
+Pardubice,2019,34962,Rodinné domy
+Svitavy,2019,24288,Rodinné domy
+Ústí nad Orlicí,2019,22401,Rodinné domy
+Kraj Vysočina,2019,28385,Rodinné domy
+Havlíčkův Brod,2019,23607,Rodinné domy
+Jihlava,2019,32895,Rodinné domy
+Pelhřimov,2019,26345,Rodinné domy
+Třebíč,2019,25684,Rodinné domy
+Žďár nad Sázavou,2019,28941,Rodinné domy
+Jihomoravský kraj,2019,41092,Rodinné domy
+Blansko,2019,29571,Rodinné domy
+Brno-město,2019,50541,Rodinné domy
+Brno-venkov,2019,31614,Rodinné domy
+Břeclav,2019,28093,Rodinné domy
+Hodonín,2019,25887,Rodinné domy
+Vyškov,2019,30272,Rodinné domy
+Znojmo,2019,27366,Rodinné domy
+Olomoucký kraj,2019,27973,Rodinné domy
+Jeseník,2019,17998,Rodinné domy
+Olomouc,2019,34601,Rodinné domy
+Prostějov,2019,25030,Rodinné domy
+Přerov,2019,23032,Rodinné domy
+Šumperk,2019,23528,Rodinné domy
+Zlínský kraj,2019,28421,Rodinné domy
+Kroměříž,2019,26309,Rodinné domy
+Uherské Hradiště,2019,28335,Rodinné domy
+Vsetín,2019,26273,Rodinné domy
+Zlín,2019,33143,Rodinné domy
+Moravskoslezský kraj,2019,23372,Rodinné domy
+Bruntál,2019,18195,Rodinné domy
+Frýdek-Místek,2019,24339,Rodinné domy
+Karviná,2019,18904,Rodinné domy
+Nový Jičín,2019,21174,Rodinné domy
+Opava,2019,27922,Rodinné domy
+Ostrava-město,2019,25219,Rodinné domy
+Česká republika,2020,44082,Rodinné domy
+Hlavní město Praha,2020,85784,Rodinné domy
+Středočeský kraj,2020,37326,Rodinné domy
+Benešov,2020,35967,Rodinné domy
+Beroun,2020,38181,Rodinné domy
+Kladno,2020,44436,Rodinné domy
+Kolín,2020,34670,Rodinné domy
+Kutná Hora,2020,30215,Rodinné domy
+Mělník,2020,38299,Rodinné domy
+Mladá Boleslav,2020,36022,Rodinné domy
+Nymburk,2020,35228,Rodinné domy
+Praha-východ,2020,38838,Rodinné domy
+Praha-západ,2020,39639,Rodinné domy
+Příbram,2020,32921,Rodinné domy
+Rakovník,2020,29322,Rodinné domy
+Jihočeský kraj,2020,32986,Rodinné domy
+České Budějovice,2020,40866,Rodinné domy
+Český Krumlov,2020,27177,Rodinné domy
+Jindřichův Hradec,2020,27073,Rodinné domy
+Písek,2020,29591,Rodinné domy
+Prachatice,2020,22537,Rodinné domy
+Strakonice,2020,27750,Rodinné domy
+Tábor,2020,29906,Rodinné domy
+Plzeňský kraj,2020,34071,Rodinné domy
+Domažlice,2020,28721,Rodinné domy
+Klatovy,2020,26019,Rodinné domy
+Plzeň-jih,2020,24553,Rodinné domy
+Plzeň-město,2020,42676,Rodinné domy
+Plzeň-sever,2020,30292,Rodinné domy
+Rokycany,2020,30574,Rodinné domy
+Tachov,2020,25113,Rodinné domy
+Karlovarský kraj,2020,23707,Rodinné domy
+Cheb,2020,23895,Rodinné domy
+Karlovy Vary,2020,25816,Rodinné domy
+Sokolov,2020,17647,Rodinné domy
+Ústecký kraj,2020,23343,Rodinné domy
+Děčín,2020,21235,Rodinné domy
+Chomutov,2020,19559,Rodinné domy
+Litoměřice,2020,28838,Rodinné domy
+Louny,2020,23545,Rodinné domy
+Most,2020,21730,Rodinné domy
+Teplice,2020,20722,Rodinné domy
+Ústí nad Labem,2020,26661,Rodinné domy
+Liberecký kraj,2020,31559,Rodinné domy
+Česká Lípa,2020,23651,Rodinné domy
+Jablonec nad Nisou,2020,28786,Rodinné domy
+Liberec,2020,38595,Rodinné domy
+Semily,2020,28351,Rodinné domy
+Královéhradecký kraj,2020,32113,Rodinné domy
+Hradec Králové,2020,45047,Rodinné domy
+Jičín,2020,30887,Rodinné domy
+Náchod,2020,23750,Rodinné domy
+Rychnov nad Kněžnou,2020,29121,Rodinné domy
+Trutnov,2020,27145,Rodinné domy
+Pardubický kraj,2020,35067,Rodinné domy
+Chrudim,2020,29135,Rodinné domy
+Pardubice,2020,40899,Rodinné domy
+Svitavy,2020,28729,Rodinné domy
+Ústí nad Orlicí,2020,29121,Rodinné domy
+Kraj Vysočina,2020,32865,Rodinné domy
+Havlíčkův Brod,2020,27527,Rodinné domy
+Jihlava,2020,37653,Rodinné domy
+Pelhřimov,2020,28868,Rodinné domy
+Třebíč,2020,31720,Rodinné domy
+Žďár nad Sázavou,2020,32104,Rodinné domy
+Jihomoravský kraj,2020,46551,Rodinné domy
+Blansko,2020,32760,Rodinné domy
+Brno-město,2020,57424,Rodinné domy
+Brno-venkov,2020,36495,Rodinné domy
+Břeclav,2020,35023,Rodinné domy
+Hodonín,2020,29435,Rodinné domy
+Vyškov,2020,34267,Rodinné domy
+Znojmo,2020,32411,Rodinné domy
+Olomoucký kraj,2020,32158,Rodinné domy
+Jeseník,2020,22679,Rodinné domy
+Olomouc,2020,40223,Rodinné domy
+Prostějov,2020,29467,Rodinné domy
+Přerov,2020,25819,Rodinné domy
+Šumperk,2020,26410,Rodinné domy
+Zlínský kraj,2020,30878,Rodinné domy
+Kroměříž,2020,26436,Rodinné domy
+Uherské Hradiště,2020,33238,Rodinné domy
+Vsetín,2020,30165,Rodinné domy
+Zlín,2020,35539,Rodinné domy
+Moravskoslezský kraj,2020,27131,Rodinné domy
+Bruntál,2020,19633,Rodinné domy
+Frýdek-Místek,2020,28571,Rodinné domy
+Karviná,2020,20923,Rodinné domy
+Nový Jičín,2020,25211,Rodinné domy
+Opava,2020,29371,Rodinné domy
+Ostrava-město,2020,30095,Rodinné domy
