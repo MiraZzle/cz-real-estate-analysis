@@ -454,185 +454,1004 @@ Karviná,2023,38069,Rodinné domy
 Nový Jičín,2023,40521,Rodinné domy
 Opava,2023,38791,Rodinné domy
 Ostrava-město,2023,53006,Rodinné domy
-Česká republika,2019,39306,Rodinné domy
-Hlavní město Praha,2019,76391,Rodinné domy
-Středočeský kraj,2019,31208,Rodinné domy
-Benešov,2019,28649,Rodinné domy
-Beroun,2019,32338,Rodinné domy
-Kladno,2019,37796,Rodinné domy
-Kolín,2019,27940,Rodinné domy
-Kutná Hora,2019,25929,Rodinné domy
-Mělník,2019,32149,Rodinné domy
-Mladá Boleslav,2019,28871,Rodinné domy
-Nymburk,2019,31373,Rodinné domy
-Praha-východ,2019,31395,Rodinné domy
-Praha-západ,2019,31630,Rodinné domy
-Příbram,2019,28186,Rodinné domy
-Rakovník,2019,28820,Rodinné domy
-Jihočeský kraj,2019,27412,Rodinné domy
-České Budějovice,2019,34592,Rodinné domy
-Český Krumlov,2019,23614,Rodinné domy
-Jindřichův Hradec,2019,21557,Rodinné domy
-Písek,2019,22930,Rodinné domy
-Prachatice,2019,17905,Rodinné domy
-Strakonice,2019,22643,Rodinné domy
-Tábor,2019,24477,Rodinné domy
-Plzeňský kraj,2019,31302,Rodinné domy
-Domažlice,2019,24174,Rodinné domy
-Klatovy,2019,22418,Rodinné domy
-Plzeň-jih,2019,23444,Rodinné domy
-Plzeň-město,2019,38769,Rodinné domy
-Plzeň-sever,2019,25587,Rodinné domy
-Rokycany,2019,27231,Rodinné domy
-Tachov,2019,22370,Rodinné domy
-Karlovarský kraj,2019,21256,Rodinné domy
-Cheb,2019,21792,Rodinné domy
-Karlovy Vary,2019,22642,Rodinné domy
-Sokolov,2019,16554,Rodinné domy
-Ústecký kraj,2019,19954,Rodinné domy
-Děčín,2019,18427,Rodinné domy
-Chomutov,2019,16246,Rodinné domy
-Litoměřice,2019,24073,Rodinné domy
-Louny,2019,19348,Rodinné domy
-Most,2019,18696,Rodinné domy
-Teplice,2019,19242,Rodinné domy
-Ústí nad Labem,2019,22872,Rodinné domy
-Liberecký kraj,2019,27554,Rodinné domy
-Česká Lípa,2019,20109,Rodinné domy
-Jablonec nad Nisou,2019,24879,Rodinné domy
-Liberec,2019,32644,Rodinné domy
-Semily,2019,24343,Rodinné domy
-Královéhradecký kraj,2019,28075,Rodinné domy
-Hradec Králové,2019,38025,Rodinné domy
-Jičín,2019,27932,Rodinné domy
-Náchod,2019,20244,Rodinné domy
-Rychnov nad Kněžnou,2019,25913,Rodinné domy
-Trutnov,2019,22317,Rodinné domy
-Pardubický kraj,2019,28985,Rodinné domy
-Chrudim,2019,24370,Rodinné domy
-Pardubice,2019,34962,Rodinné domy
-Svitavy,2019,24288,Rodinné domy
-Ústí nad Orlicí,2019,22401,Rodinné domy
-Kraj Vysočina,2019,28385,Rodinné domy
-Havlíčkův Brod,2019,23607,Rodinné domy
-Jihlava,2019,32895,Rodinné domy
-Pelhřimov,2019,26345,Rodinné domy
-Třebíč,2019,25684,Rodinné domy
-Žďár nad Sázavou,2019,28941,Rodinné domy
-Jihomoravský kraj,2019,41092,Rodinné domy
-Blansko,2019,29571,Rodinné domy
-Brno-město,2019,50541,Rodinné domy
-Brno-venkov,2019,31614,Rodinné domy
-Břeclav,2019,28093,Rodinné domy
-Hodonín,2019,25887,Rodinné domy
-Vyškov,2019,30272,Rodinné domy
-Znojmo,2019,27366,Rodinné domy
-Olomoucký kraj,2019,27973,Rodinné domy
-Jeseník,2019,17998,Rodinné domy
-Olomouc,2019,34601,Rodinné domy
-Prostějov,2019,25030,Rodinné domy
-Přerov,2019,23032,Rodinné domy
-Šumperk,2019,23528,Rodinné domy
-Zlínský kraj,2019,28421,Rodinné domy
-Kroměříž,2019,26309,Rodinné domy
-Uherské Hradiště,2019,28335,Rodinné domy
-Vsetín,2019,26273,Rodinné domy
-Zlín,2019,33143,Rodinné domy
-Moravskoslezský kraj,2019,23372,Rodinné domy
-Bruntál,2019,18195,Rodinné domy
-Frýdek-Místek,2019,24339,Rodinné domy
-Karviná,2019,18904,Rodinné domy
-Nový Jičín,2019,21174,Rodinné domy
-Opava,2019,27922,Rodinné domy
-Ostrava-město,2019,25219,Rodinné domy
-Česká republika,2020,44082,Rodinné domy
-Hlavní město Praha,2020,85784,Rodinné domy
-Středočeský kraj,2020,37326,Rodinné domy
-Benešov,2020,35967,Rodinné domy
-Beroun,2020,38181,Rodinné domy
-Kladno,2020,44436,Rodinné domy
-Kolín,2020,34670,Rodinné domy
-Kutná Hora,2020,30215,Rodinné domy
-Mělník,2020,38299,Rodinné domy
-Mladá Boleslav,2020,36022,Rodinné domy
-Nymburk,2020,35228,Rodinné domy
-Praha-východ,2020,38838,Rodinné domy
-Praha-západ,2020,39639,Rodinné domy
-Příbram,2020,32921,Rodinné domy
-Rakovník,2020,29322,Rodinné domy
-Jihočeský kraj,2020,32986,Rodinné domy
-České Budějovice,2020,40866,Rodinné domy
-Český Krumlov,2020,27177,Rodinné domy
-Jindřichův Hradec,2020,27073,Rodinné domy
-Písek,2020,29591,Rodinné domy
-Prachatice,2020,22537,Rodinné domy
-Strakonice,2020,27750,Rodinné domy
-Tábor,2020,29906,Rodinné domy
-Plzeňský kraj,2020,34071,Rodinné domy
-Domažlice,2020,28721,Rodinné domy
-Klatovy,2020,26019,Rodinné domy
-Plzeň-jih,2020,24553,Rodinné domy
-Plzeň-město,2020,42676,Rodinné domy
-Plzeň-sever,2020,30292,Rodinné domy
-Rokycany,2020,30574,Rodinné domy
-Tachov,2020,25113,Rodinné domy
-Karlovarský kraj,2020,23707,Rodinné domy
-Cheb,2020,23895,Rodinné domy
-Karlovy Vary,2020,25816,Rodinné domy
-Sokolov,2020,17647,Rodinné domy
-Ústecký kraj,2020,23343,Rodinné domy
-Děčín,2020,21235,Rodinné domy
-Chomutov,2020,19559,Rodinné domy
-Litoměřice,2020,28838,Rodinné domy
-Louny,2020,23545,Rodinné domy
-Most,2020,21730,Rodinné domy
-Teplice,2020,20722,Rodinné domy
-Ústí nad Labem,2020,26661,Rodinné domy
-Liberecký kraj,2020,31559,Rodinné domy
-Česká Lípa,2020,23651,Rodinné domy
-Jablonec nad Nisou,2020,28786,Rodinné domy
-Liberec,2020,38595,Rodinné domy
-Semily,2020,28351,Rodinné domy
-Královéhradecký kraj,2020,32113,Rodinné domy
-Hradec Králové,2020,45047,Rodinné domy
-Jičín,2020,30887,Rodinné domy
-Náchod,2020,23750,Rodinné domy
-Rychnov nad Kněžnou,2020,29121,Rodinné domy
-Trutnov,2020,27145,Rodinné domy
-Pardubický kraj,2020,35067,Rodinné domy
-Chrudim,2020,29135,Rodinné domy
-Pardubice,2020,40899,Rodinné domy
-Svitavy,2020,28729,Rodinné domy
-Ústí nad Orlicí,2020,29121,Rodinné domy
-Kraj Vysočina,2020,32865,Rodinné domy
-Havlíčkův Brod,2020,27527,Rodinné domy
-Jihlava,2020,37653,Rodinné domy
-Pelhřimov,2020,28868,Rodinné domy
-Třebíč,2020,31720,Rodinné domy
-Žďár nad Sázavou,2020,32104,Rodinné domy
-Jihomoravský kraj,2020,46551,Rodinné domy
-Blansko,2020,32760,Rodinné domy
-Brno-město,2020,57424,Rodinné domy
-Brno-venkov,2020,36495,Rodinné domy
-Břeclav,2020,35023,Rodinné domy
-Hodonín,2020,29435,Rodinné domy
-Vyškov,2020,34267,Rodinné domy
-Znojmo,2020,32411,Rodinné domy
-Olomoucký kraj,2020,32158,Rodinné domy
-Jeseník,2020,22679,Rodinné domy
-Olomouc,2020,40223,Rodinné domy
-Prostějov,2020,29467,Rodinné domy
-Přerov,2020,25819,Rodinné domy
-Šumperk,2020,26410,Rodinné domy
-Zlínský kraj,2020,30878,Rodinné domy
-Kroměříž,2020,26436,Rodinné domy
-Uherské Hradiště,2020,33238,Rodinné domy
-Vsetín,2020,30165,Rodinné domy
-Zlín,2020,35539,Rodinné domy
-Moravskoslezský kraj,2020,27131,Rodinné domy
-Bruntál,2020,19633,Rodinné domy
-Frýdek-Místek,2020,28571,Rodinné domy
-Karviná,2020,20923,Rodinné domy
-Nový Jičín,2020,25211,Rodinné domy
-Opava,2020,29371,Rodinné domy
-Ostrava-město,2020,30095,Rodinné domy
+Česká republika,2019,38345,Rodinné domy
+Hlavní město Praha,2019,79275,Rodinné domy
+Středočeský kraj,2019,49122,Rodinné domy
+Benešov,2019,36560,Rodinné domy
+Beroun,2019,40166,Rodinné domy
+Kladno,2019,40004,Rodinné domy
+Kolín,2019,34387,Rodinné domy
+Kutná Hora,2019,33425,Rodinné domy
+Mělník,2019,37712,Rodinné domy
+Mladá Boleslav,2019,37245,Rodinné domy
+Nymburk,2019,32809,Rodinné domy
+Praha-východ,2019,66825,Rodinné domy
+Praha-západ,2019,65009,Rodinné domy
+Příbram,2019,34790,Rodinné domy
+Rakovník,2019,31580,Rodinné domy
+Jihočeský kraj,2019,34286,Rodinné domy
+České Budějovice,2019,39909,Rodinné domy
+Český Krumlov,2019,32964,Rodinné domy
+Jindřichův Hradec,2019,30353,Rodinné domy
+Písek,2019,28880,Rodinné domy
+Prachatice,2019,29999,Rodinné domy
+Strakonice,2019,31575,Rodinné domy
+Tábor,2019,31469,Rodinné domy
+Plzeňský kraj,2019,34428,Rodinné domy
+Domažlice,2019,29233,Rodinné domy
+Klatovy,2019,30542,Rodinné domy
+Plzeň-jih,2019,29135,Rodinné domy
+Plzeň-město,2019,48805,Rodinné domy
+Plzeň-sever,2019,33541,Rodinné domy
+Rokycany,2019,30103,Rodinné domy
+Tachov,2019,30403,Rodinné domy
+Karlovarský kraj,2019,29064,Rodinné domy
+Cheb,2019,27810,Rodinné domy
+Karlovy Vary,2019,32440,Rodinné domy
+Sokolov,2019,26929,Rodinné domy
+Ústecký kraj,2019,28891,Rodinné domy
+Děčín,2019,27202,Rodinné domy
+Chomutov,2019,29526,Rodinné domy
+Litoměřice,2019,27472,Rodinné domy
+Louny,2019,26071,Rodinné domy
+Most,2019,33113,Rodinné domy
+Teplice,2019,31207,Rodinné domy
+Ústí nad Labem,2019,36293,Rodinné domy
+Liberecký kraj,2019,34746,Rodinné domy
+Česká Lípa,2019,30188,Rodinné domy
+Jablonec nad Nisou,2019,31778,Rodinné domy
+Liberec,2019,39595,Rodinné domy
+Semily,2019,30091,Rodinné domy
+Královéhradecký kraj,2019,33636,Rodinné domy
+Hradec Králové,2019,41678,Rodinné domy
+Jičín,2019,28592,Rodinné domy
+Náchod,2019,28095,Rodinné domy
+Rychnov nad Kněžnou,2019,30599,Rodinné domy
+Trutnov,2019,31565,Rodinné domy
+Pardubický kraj,2019,32015,Rodinné domy
+Chrudim,2019,29526,Rodinné domy
+Pardubice,2019,40097,Rodinné domy
+Svitavy,2019,29424,Rodinné domy
+Ústí nad Orlicí,2019,29522,Rodinné domy
+Kraj Vysočina,2019,31856,Rodinné domy
+Havlíčkův Brod,2019,30841,Rodinné domy
+Jihlava,2019,36151,Rodinné domy
+Pelhřimov,2019,30999,Rodinné domy
+Třebíč,2019,28918,Rodinné domy
+Žďár nad Sázavou,2019,31381,Rodinné domy
+Jihomoravský kraj,2019,37365,Rodinné domy
+Blansko,2019,32507,Rodinné domy
+Brno-město,2019,57975,Rodinné domy
+Brno-venkov,2019,36267,Rodinné domy
+Břeclav,2019,32927,Rodinné domy
+Hodonín,2019,28627,Rodinné domy
+Vyškov,2019,32721,Rodinné domy
+Znojmo,2019,30645,Rodinné domy
+Olomoucký kraj,2019,28777,Rodinné domy
+Jeseník,2019,25229,Rodinné domy
+Olomouc,2019,33166,Rodinné domy
+Prostějov,2019,28319,Rodinné domy
+Přerov,2019,25312,Rodinné domy
+Šumperk,2019,27063,Rodinné domy
+Zlínský kraj,2019,28428,Rodinné domy
+Kroměříž,2019,24607,Rodinné domy
+Uherské Hradiště,2019,26940,Rodinné domy
+Vsetín,2019,28449,Rodinné domy
+Zlín,2019,32026,Rodinné domy
+Moravskoslezský kraj,2019,31296,Rodinné domy
+Bruntál,2019,25213,Rodinné domy
+Frýdek-Místek,2019,32366,Rodinné domy
+Karviná,2019,30680,Rodinné domy
+Nový Jičín,2019,28797,Rodinné domy
+Opava,2019,30683,Rodinné domy
+Ostrava-město,2019,37854,Rodinné domy
+Česká republika,2020,42763,Rodinné domy
+Hlavní město Praha,2020,91986,Rodinné domy
+Středočeský kraj,2020,55868,Rodinné domy
+Benešov,2020,40685,Rodinné domy
+Beroun,2020,43143,Rodinné domy
+Kladno,2020,45687,Rodinné domy
+Kolín,2020,39273,Rodinné domy
+Kutná Hora,2020,36384,Rodinné domy
+Mělník,2020,41318,Rodinné domy
+Mladá Boleslav,2020,40794,Rodinné domy
+Nymburk,2020,37713,Rodinné domy
+Praha-východ,2020,78744,Rodinné domy
+Praha-západ,2020,75499,Rodinné domy
+Příbram,2020,38983,Rodinné domy
+Rakovník,2020,35839,Rodinné domy
+Jihočeský kraj,2020,38734,Rodinné domy
+České Budějovice,2020,45061,Rodinné domy
+Český Krumlov,2020,36262,Rodinné domy
+Jindřichův Hradec,2020,36067,Rodinné domy
+Písek,2020,32153,Rodinné domy
+Prachatice,2020,34448,Rodinné domy
+Strakonice,2020,34169,Rodinné domy
+Tábor,2020,36431,Rodinné domy
+Plzeňský kraj,2020,38120,Rodinné domy
+Domažlice,2020,32080,Rodinné domy
+Klatovy,2020,34206,Rodinné domy
+Plzeň-jih,2020,33518,Rodinné domy
+Plzeň-město,2020,55657,Rodinné domy
+Plzeň-sever,2020,37501,Rodinné domy
+Rokycany,2020,33478,Rodinné domy
+Tachov,2020,33814,Rodinné domy
+Karlovarský kraj,2020,33052,Rodinné domy
+Cheb,2020,30952,Rodinné domy
+Karlovy Vary,2020,37486,Rodinné domy
+Sokolov,2020,30796,Rodinné domy
+Ústecký kraj,2020,32690,Rodinné domy
+Děčín,2020,30663,Rodinné domy
+Chomutov,2020,33306,Rodinné domy
+Litoměřice,2020,32097,Rodinné domy
+Louny,2020,29597,Rodinné domy
+Most,2020,36208,Rodinné domy
+Teplice,2020,34177,Rodinné domy
+Ústí nad Labem,2020,41501,Rodinné domy
+Liberecký kraj,2020,39801,Rodinné domy
+Česká Lípa,2020,35471,Rodinné domy
+Jablonec nad Nisou,2020,37229,Rodinné domy
+Liberec,2020,44567,Rodinné domy
+Semily,2020,34352,Rodinné domy
+Královéhradecký kraj,2020,37913,Rodinné domy
+Hradec Králové,2020,46958,Rodinné domy
+Jičín,2020,32783,Rodinné domy
+Náchod,2020,31247,Rodinné domy
+Rychnov nad Kněžnou,2020,34558,Rodinné domy
+Trutnov,2020,36276,Rodinné domy
+Pardubický kraj,2020,35595,Rodinné domy
+Chrudim,2020,33852,Rodinné domy
+Pardubice,2020,46187,Rodinné domy
+Svitavy,2020,32922,Rodinné domy
+Ústí nad Orlicí,2020,32674,Rodinné domy
+Kraj Vysočina,2020,35459,Rodinné domy
+Havlíčkův Brod,2020,34466,Rodinné domy
+Jihlava,2020,40435,Rodinné domy
+Pelhřimov,2020,33570,Rodinné domy
+Třebíč,2020,32726,Rodinné domy
+Žďár nad Sázavou,2020,35527,Rodinné domy
+Jihomoravský kraj,2020,41629,Rodinné domy
+Blansko,2020,35348,Rodinné domy
+Brno-město,2020,64207,Rodinné domy
+Brno-venkov,2020,40204,Rodinné domy
+Břeclav,2020,36937,Rodinné domy
+Hodonín,2020,32411,Rodinné domy
+Vyškov,2020,36578,Rodinné domy
+Znojmo,2020,34289,Rodinné domy
+Olomoucký kraj,2020,32572,Rodinné domy
+Jeseník,2020,29440,Rodinné domy
+Olomouc,2020,36770,Rodinné domy
+Prostějov,2020,32296,Rodinné domy
+Přerov,2020,28977,Rodinné domy
+Šumperk,2020,31194,Rodinné domy
+Zlínský kraj,2020,32356,Rodinné domy
+Kroměříž,2020,28563,Rodinné domy
+Uherské Hradiště,2020,30094,Rodinné domy
+Vsetín,2020,33074,Rodinné domy
+Zlín,2020,36410,Rodinné domy
+Moravskoslezský kraj,2020,34922,Rodinné domy
+Bruntál,2020,28289,Rodinné domy
+Frýdek-Místek,2020,36350,Rodinné domy
+Karviná,2020,34328,Rodinné domy
+Nový Jičín,2020,32196,Rodinné domy
+Opava,2020,34426,Rodinné domy
+Ostrava-město,2020,41683,Rodinné domy
+Česká republika,2021,46541,Rodinné domy
+Hlavní město Praha,2021,102456,Rodinné domy
+Středočeský kraj,2021,62004,Rodinné domy
+Benešov,2021,44623,Rodinné domy
+Beroun,2021,45022,Rodinné domy
+Kladno,2021,49761,Rodinné domy
+Kolín,2021,43293,Rodinné domy
+Kutná Hora,2021,43135,Rodinné domy
+Mělník,2021,45723,Rodinné domy
+Mladá Boleslav,2021,44801,Rodinné domy
+Nymburk,2021,42486,Rodinné domy
+Praha-východ,2021,87665,Rodinné domy
+Praha-západ,2021,85231,Rodinné domy
+Příbram,2021,42466,Rodinné domy
+Rakovník,2021,40315,Rodinné domy
+Jihočeský kraj,2021,43274,Rodinné domy
+České Budějovice,2021,51072,Rodinné domy
+Český Krumlov,2021,42653,Rodinné domy
+Jindřichův Hradec,2021,39643,Rodinné domy
+Písek,2021,36648,Rodinné domy
+Prachatice,2021,36280,Rodinné domy
+Strakonice,2021,36817,Rodinné domy
+Tábor,2021,41606,Rodinné domy
+Plzeňský kraj,2021,42055,Rodinné domy
+Domažlice,2021,36713,Rodinné domy
+Klatovy,2021,39190,Rodinné domy
+Plzeň-jih,2021,37505,Rodinné domy
+Plzeň-město,2021,63066,Rodinné domy
+Plzeň-sever,2021,41504,Rodinné domy
+Rokycany,2021,38137,Rodinné domy
+Tachov,2021,36910,Rodinné domy
+Karlovarský kraj,2021,35862,Rodinné domy
+Cheb,2021,32977,Rodinné domy
+Karlovy Vary,2021,40679,Rodinné domy
+Sokolov,2021,33943,Rodinné domy
+Ústecký kraj,2021,35857,Rodinné domy
+Děčín,2021,33487,Rodinné domy
+Chomutov,2021,37480,Rodinné domy
+Litoměřice,2021,35670,Rodinné domy
+Louny,2021,31900,Rodinné domy
+Most,2021,39530,Rodinné domy
+Teplice,2021,38453,Rodinné domy
+Ústí nad Labem,2021,43642,Rodinné domy
+Liberecký kraj,2021,43938,Rodinné domy
+Česká Lípa,2021,38367,Rodinné domy
+Jablonec nad Nisou,2021,40890,Rodinné domy
+Liberec,2021,49139,Rodinné domy
+Semily,2021,38661,Rodinné domy
+Královéhradecký kraj,2021,42407,Rodinné domy
+Hradec Králové,2021,53570,Rodinné domy
+Jičín,2021,38293,Rodinné domy
+Náchod,2021,35953,Rodinné domy
+Rychnov nad Kněžnou,2021,38626,Rodinné domy
+Trutnov,2021,38872,Rodinné domy
+Pardubický kraj,2021,39420,Rodinné domy
+Chrudim,2021,37368,Rodinné domy
+Pardubice,2021,51361,Rodinné domy
+Svitavy,2021,36284,Rodinné domy
+Ústí nad Orlicí,2021,37034,Rodinné domy
+Kraj Vysočina,2021,39036,Rodinné domy
+Havlíčkův Brod,2021,38176,Rodinné domy
+Jihlava,2021,44493,Rodinné domy
+Pelhřimov,2021,36168,Rodinné domy
+Třebíč,2021,35914,Rodinné domy
+Žďár nad Sázavou,2021,39242,Rodinné domy
+Jihomoravský kraj,2021,46276,Rodinné domy
+Blansko,2021,39443,Rodinné domy
+Brno-město,2021,71967,Rodinné domy
+Brno-venkov,2021,44782,Rodinné domy
+Břeclav,2021,40790,Rodinné domy
+Hodonín,2021,36150,Rodinné domy
+Vyškov,2021,40835,Rodinné domy
+Znojmo,2021,38913,Rodinné domy
+Olomoucký kraj,2021,36044,Rodinné domy
+Jeseník,2021,31400,Rodinné domy
+Olomouc,2021,40837,Rodinné domy
+Prostějov,2021,35880,Rodinné domy
+Přerov,2021,32456,Rodinné domy
+Šumperk,2021,35137,Rodinné domy
+Zlínský kraj,2021,35544,Rodinné domy
+Kroměříž,2021,32890,Rodinné domy
+Uherské Hradiště,2021,32183,Rodinné domy
+Vsetín,2021,36493,Rodinné domy
+Zlín,2021,40618,Rodinné domy
+Moravskoslezský kraj,2021,38753,Rodinné domy
+Bruntál,2021,31198,Rodinné domy
+Frýdek-Místek,2021,40503,Rodinné domy
+Karviná,2021,37593,Rodinné domy
+Nový Jičín,2021,36402,Rodinné domy
+Opava,2021,37336,Rodinné domy
+Ostrava-město,2021,47733,Rodinné domy
+Česká republika,2019,39306,Byty
+Hlavní město Praha,2019,76391,Byty
+Středočeský kraj,2019,31208,Byty
+Benešov,2019,28649,Byty
+Beroun,2019,32338,Byty
+Kladno,2019,37796,Byty
+Kolín,2019,27940,Byty
+Kutná Hora,2019,25929,Byty
+Mělník,2019,32149,Byty
+Mladá Boleslav,2019,28871,Byty
+Nymburk,2019,31373,Byty
+Praha-východ,2019,31395,Byty
+Praha-západ,2019,31630,Byty
+Příbram,2019,28186,Byty
+Rakovník,2019,28820,Byty
+Jihočeský kraj,2019,27412,Byty
+České Budějovice,2019,34592,Byty
+Český Krumlov,2019,23614,Byty
+Jindřichův Hradec,2019,21557,Byty
+Písek,2019,22930,Byty
+Prachatice,2019,17905,Byty
+Strakonice,2019,22643,Byty
+Tábor,2019,24477,Byty
+Plzeňský kraj,2019,31302,Byty
+Domažlice,2019,24174,Byty
+Klatovy,2019,22418,Byty
+Plzeň-jih,2019,23444,Byty
+Plzeň-město,2019,38769,Byty
+Plzeň-sever,2019,25587,Byty
+Rokycany,2019,27231,Byty
+Tachov,2019,22370,Byty
+Karlovarský kraj,2019,21256,Byty
+Cheb,2019,21792,Byty
+Karlovy Vary,2019,22642,Byty
+Sokolov,2019,16554,Byty
+Ústecký kraj,2019,19954,Byty
+Děčín,2019,18427,Byty
+Chomutov,2019,16246,Byty
+Litoměřice,2019,24073,Byty
+Louny,2019,19348,Byty
+Most,2019,18696,Byty
+Teplice,2019,19242,Byty
+Ústí nad Labem,2019,22872,Byty
+Liberecký kraj,2019,27554,Byty
+Česká Lípa,2019,20109,Byty
+Jablonec nad Nisou,2019,24879,Byty
+Liberec,2019,32644,Byty
+Semily,2019,24343,Byty
+Královéhradecký kraj,2019,28075,Byty
+Hradec Králové,2019,38025,Byty
+Jičín,2019,27932,Byty
+Náchod,2019,20244,Byty
+Rychnov nad Kněžnou,2019,25913,Byty
+Trutnov,2019,22317,Byty
+Pardubický kraj,2019,28985,Byty
+Chrudim,2019,24370,Byty
+Pardubice,2019,34962,Byty
+Svitavy,2019,24288,Byty
+Ústí nad Orlicí,2019,22401,Byty
+Kraj Vysočina,2019,28385,Byty
+Havlíčkův Brod,2019,23607,Byty
+Jihlava,2019,32895,Byty
+Pelhřimov,2019,26345,Byty
+Třebíč,2019,25684,Byty
+Žďár nad Sázavou,2019,28941,Byty
+Jihomoravský kraj,2019,41092,Byty
+Blansko,2019,29571,Byty
+Brno-město,2019,50541,Byty
+Brno-venkov,2019,31614,Byty
+Břeclav,2019,28093,Byty
+Hodonín,2019,25887,Byty
+Vyškov,2019,30272,Byty
+Znojmo,2019,27366,Byty
+Olomoucký kraj,2019,27973,Byty
+Jeseník,2019,17998,Byty
+Olomouc,2019,34601,Byty
+Prostějov,2019,25030,Byty
+Přerov,2019,23032,Byty
+Šumperk,2019,23528,Byty
+Zlínský kraj,2019,28421,Byty
+Kroměříž,2019,26309,Byty
+Uherské Hradiště,2019,28335,Byty
+Vsetín,2019,26273,Byty
+Zlín,2019,33143,Byty
+Moravskoslezský kraj,2019,23372,Byty
+Bruntál,2019,18195,Byty
+Frýdek-Místek,2019,24339,Byty
+Karviná,2019,18904,Byty
+Nový Jičín,2019,21174,Byty
+Opava,2019,27922,Byty
+Ostrava-město,2019,25219,Byty
+Česká republika,2020,44082,Byty
+Hlavní město Praha,2020,85784,Byty
+Středočeský kraj,2020,37326,Byty
+Benešov,2020,35967,Byty
+Beroun,2020,38181,Byty
+Kladno,2020,44436,Byty
+Kolín,2020,34670,Byty
+Kutná Hora,2020,30215,Byty
+Mělník,2020,38299,Byty
+Mladá Boleslav,2020,36022,Byty
+Nymburk,2020,35228,Byty
+Praha-východ,2020,38838,Byty
+Praha-západ,2020,39639,Byty
+Příbram,2020,32921,Byty
+Rakovník,2020,29322,Byty
+Jihočeský kraj,2020,32986,Byty
+České Budějovice,2020,40866,Byty
+Český Krumlov,2020,27177,Byty
+Jindřichův Hradec,2020,27073,Byty
+Písek,2020,29591,Byty
+Prachatice,2020,22537,Byty
+Strakonice,2020,27750,Byty
+Tábor,2020,29906,Byty
+Plzeňský kraj,2020,34071,Byty
+Domažlice,2020,28721,Byty
+Klatovy,2020,26019,Byty
+Plzeň-jih,2020,24553,Byty
+Plzeň-město,2020,42676,Byty
+Plzeň-sever,2020,30292,Byty
+Rokycany,2020,30574,Byty
+Tachov,2020,25113,Byty
+Karlovarský kraj,2020,23707,Byty
+Cheb,2020,23895,Byty
+Karlovy Vary,2020,25816,Byty
+Sokolov,2020,17647,Byty
+Ústecký kraj,2020,23343,Byty
+Děčín,2020,21235,Byty
+Chomutov,2020,19559,Byty
+Litoměřice,2020,28838,Byty
+Louny,2020,23545,Byty
+Most,2020,21730,Byty
+Teplice,2020,20722,Byty
+Ústí nad Labem,2020,26661,Byty
+Liberecký kraj,2020,31559,Byty
+Česká Lípa,2020,23651,Byty
+Jablonec nad Nisou,2020,28786,Byty
+Liberec,2020,38595,Byty
+Semily,2020,28351,Byty
+Královéhradecký kraj,2020,32113,Byty
+Hradec Králové,2020,45047,Byty
+Jičín,2020,30887,Byty
+Náchod,2020,23750,Byty
+Rychnov nad Kněžnou,2020,29121,Byty
+Trutnov,2020,27145,Byty
+Pardubický kraj,2020,35067,Byty
+Chrudim,2020,29135,Byty
+Pardubice,2020,40899,Byty
+Svitavy,2020,28729,Byty
+Ústí nad Orlicí,2020,29121,Byty
+Kraj Vysočina,2020,32865,Byty
+Havlíčkův Brod,2020,27527,Byty
+Jihlava,2020,37653,Byty
+Pelhřimov,2020,28868,Byty
+Třebíč,2020,31720,Byty
+Žďár nad Sázavou,2020,32104,Byty
+Jihomoravský kraj,2020,46551,Byty
+Blansko,2020,32760,Byty
+Brno-město,2020,57424,Byty
+Brno-venkov,2020,36495,Byty
+Břeclav,2020,35023,Byty
+Hodonín,2020,29435,Byty
+Vyškov,2020,34267,Byty
+Znojmo,2020,32411,Byty
+Olomoucký kraj,2020,32158,Byty
+Jeseník,2020,22679,Byty
+Olomouc,2020,40223,Byty
+Prostějov,2020,29467,Byty
+Přerov,2020,25819,Byty
+Šumperk,2020,26410,Byty
+Zlínský kraj,2020,30878,Byty
+Kroměříž,2020,26436,Byty
+Uherské Hradiště,2020,33238,Byty
+Vsetín,2020,30165,Byty
+Zlín,2020,35539,Byty
+Moravskoslezský kraj,2020,27131,Byty
+Bruntál,2020,19633,Byty
+Frýdek-Místek,2020,28571,Byty
+Karviná,2020,20923,Byty
+Nový Jičín,2020,25211,Byty
+Opava,2020,29371,Byty
+Ostrava-město,2020,30095,Byty
+Česká republika,2021,54461,Byty
+Hlavní město Praha,2021,100809,Byty
+Středočeský kraj,2021,46983,Byty
+Benešov,2021,44861,Byty
+Beroun,2021,44837,Byty
+Kladno,2021,55945,Byty
+Kolín,2021,42874,Byty
+Kutná Hora,2021,39822,Byty
+Mělník,2021,45177,Byty
+Mladá Boleslav,2021,47902,Byty
+Nymburk,2021,43119,Byty
+Praha-východ,2021,51399,Byty
+Praha-západ,2021,46419,Byty
+Příbram,2021,42092,Byty
+Rakovník,2021,39278,Byty
+Jihočeský kraj,2021,42169,Byty
+České Budějovice,2021,50672,Byty
+Český Krumlov,2021,35539,Byty
+Jindřichův Hradec,2021,35215,Byty
+Písek,2021,36682,Byty
+Prachatice,2021,32179,Byty
+Strakonice,2021,36280,Byty
+Tábor,2021,36884,Byty
+Plzeňský kraj,2021,42838,Byty
+Domažlice,2021,30573,Byty
+Klatovy,2021,36296,Byty
+Plzeň-jih,2021,34621,Byty
+Plzeň-město,2021,52909,Byty
+Plzeň-sever,2021,38003,Byty
+Rokycany,2021,38424,Byty
+Tachov,2021,30340,Byty
+Karlovarský kraj,2021,30042,Byty
+Cheb,2021,29612,Byty
+Karlovy Vary,2021,32946,Byty
+Sokolov,2021,22322,Byty
+Ústecký kraj,2021,30832,Byty
+Děčín,2021,28328,Byty
+Chomutov,2021,25195,Byty
+Litoměřice,2021,38319,Byty
+Louny,2021,30864,Byty
+Most,2021,26649,Byty
+Teplice,2021,27224,Byty
+Ústí nad Labem,2021,35990,Byty
+Liberecký kraj,2021,39514,Byty
+Česká Lípa,2021,30687,Byty
+Jablonec nad Nisou,2021,38174,Byty
+Liberec,2021,44917,Byty
+Semily,2021,34775,Byty
+Královéhradecký kraj,2021,41308,Byty
+Hradec Králové,2021,56036,Byty
+Jičín,2021,36823,Byty
+Náchod,2021,31441,Byty
+Rychnov nad Kněžnou,2021,36054,Byty
+Trutnov,2021,35339,Byty
+Pardubický kraj,2021,42994,Byty
+Chrudim,2021,37411,Byty
+Pardubice,2021,51122,Byty
+Svitavy,2021,34965,Byty
+Ústí nad Orlicí,2021,35965,Byty
+Kraj Vysočina,2021,39919,Byty
+Havlíčkův Brod,2021,33373,Byty
+Jihlava,2021,43939,Byty
+Pelhřimov,2021,32395,Byty
+Třebíč,2021,40229,Byty
+Žďár nad Sázavou,2021,41660,Byty
+Jihomoravský kraj,2021,56961,Byty
+Blansko,2021,37654,Byty
+Brno-město,2021,71268,Byty
+Brno-venkov,2021,42803,Byty
+Břeclav,2021,42042,Byty
+Hodonín,2021,39034,Byty
+Vyškov,2021,44575,Byty
+Znojmo,2021,38905,Byty
+Olomoucký kraj,2021,39802,Byty
+Jeseník,2021,29682,Byty
+Olomouc,2021,48187,Byty
+Prostějov,2021,36806,Byty
+Přerov,2021,33492,Byty
+Šumperk,2021,34316,Byty
+Zlínský kraj,2021,39264,Byty
+Kroměříž,2021,36560,Byty
+Uherské Hradiště,2021,39358,Byty
+Vsetín,2021,36329,Byty
+Zlín,2021,45905,Byty
+Moravskoslezský kraj,2021,35298,Byty
+Bruntál,2021,25192,Byty
+Frýdek-Místek,2021,38049,Byty
+Karviná,2021,26814,Byty
+Nový Jičín,2021,32379,Byty
+Opava,2021,38343,Byty
+Ostrava-město,2021,40201,Byty
+Česká republika,2022,61742,Byty
+Hlavní město Praha,2022,112676,Byty
+Středočeský kraj,2022,56001,Byty
+Benešov,2022,50362,Byty
+Beroun,2022,54374,Byty
+Kladno,2022,68067,Byty
+Kolín,2022,52636,Byty
+Kutná Hora,2022,48900,Byty
+Mělník,2022,56151,Byty
+Mladá Boleslav,2022,56572,Byty
+Nymburk,2022,51306,Byty
+Praha-východ,2022,54602,Byty
+Praha-západ,2022,53379,Byty
+Příbram,2022,51795,Byty
+Rakovník,2022,43105,Byty
+Jihočeský kraj,2022,50440,Byty
+České Budějovice,2022,58867,Byty
+Český Krumlov,2022,45859,Byty
+Jindřichův Hradec,2022,44268,Byty
+Písek,2022,49989,Byty
+Prachatice,2022,35163,Byty
+Strakonice,2022,41972,Byty
+Tábor,2022,46981,Byty
+Plzeňský kraj,2022,52264,Byty
+Domažlice,2022,39267,Byty
+Klatovy,2022,45012,Byty
+Plzeň-jih,2022,42619,Byty
+Plzeň-město,2022,63216,Byty
+Plzeň-sever,2022,44007,Byty
+Rokycany,2022,47083,Byty
+Tachov,2022,37714,Byty
+Karlovarský kraj,2022,36270,Byty
+Cheb,2022,35668,Byty
+Karlovy Vary,2022,40512,Byty
+Sokolov,2022,28492,Byty
+Ústecký kraj,2022,36318,Byty
+Děčín,2022,34690,Byty
+Chomutov,2022,29414,Byty
+Litoměřice,2022,45715,Byty
+Louny,2022,38028,Byty
+Most,2022,32559,Byty
+Teplice,2022,32342,Byty
+Ústí nad Labem,2022,43761,Byty
+Liberecký kraj,2022,49414,Byty
+Česká Lípa,2022,41919,Byty
+Jablonec nad Nisou,2022,44608,Byty
+Liberec,2022,56464,Byty
+Semily,2022,47842,Byty
+Královéhradecký kraj,2022,48040,Byty
+Hradec Králové,2022,69884,Byty
+Jičín,2022,45707,Byty
+Náchod,2022,37020,Byty
+Rychnov nad Kněžnou,2022,43548,Byty
+Trutnov,2022,41278,Byty
+Pardubický kraj,2022,51039,Byty
+Chrudim,2022,42445,Byty
+Pardubice,2022,62058,Byty
+Svitavy,2022,41933,Byty
+Ústí nad Orlicí,2022,40711,Byty
+Kraj Vysočina,2022,48960,Byty
+Havlíčkův Brod,2022,43282,Byty
+Jihlava,2022,55544,Byty
+Pelhřimov,2022,44529,Byty
+Třebíč,2022,45078,Byty
+Žďár nad Sázavou,2022,51397,Byty
+Jihomoravský kraj,2022,67358,Byty
+Blansko,2022,48009,Byty
+Brno-město,2022,83396,Byty
+Brno-venkov,2022,51537,Byty
+Břeclav,2022,53168,Byty
+Hodonín,2022,49021,Byty
+Vyškov,2022,48168,Byty
+Znojmo,2022,48161,Byty
+Olomoucký kraj,2022,48746,Byty
+Jeseník,2022,36869,Byty
+Olomouc,2022,58152,Byty
+Prostějov,2022,46498,Byty
+Přerov,2022,41925,Byty
+Šumperk,2022,41618,Byty
+Zlínský kraj,2022,47931,Byty
+Kroměříž,2022,43651,Byty
+Uherské Hradiště,2022,49210,Byty
+Vsetín,2022,48114,Byty
+Zlín,2022,52921,Byty
+Moravskoslezský kraj,2022,42389,Byty
+Bruntál,2022,32705,Byty
+Frýdek-Místek,2022,45320,Byty
+Karviná,2022,33048,Byty
+Nový Jičín,2022,41319,Byty
+Opava,2022,46814,Byty
+Ostrava-město,2022,47973,Byty
+Česká republika,2023,58641,Byty
+Hlavní město Praha,2023,103693,Byty
+Středočeský kraj,2023,52768,Byty
+Benešov,2023,49499,Byty
+Beroun,2023,53412,Byty
+Kladno,2023,59469,Byty
+Kolín,2023,52811,Byty
+Kutná Hora,2023,45050,Byty
+Mělník,2023,53867,Byty
+Mladá Boleslav,2023,51949,Byty
+Nymburk,2023,48794,Byty
+Praha-východ,2023,55416,Byty
+Praha-západ,2023,51949,Byty
+Příbram,2023,47766,Byty
+Rakovník,2023,47241,Byty
+Jihočeský kraj,2023,46010,Byty
+České Budějovice,2023,53879,Byty
+Český Krumlov,2023,41396,Byty
+Jindřichův Hradec,2023,39401,Byty
+Písek,2023,42975,Byty
+Prachatice,2023,37115,Byty
+Strakonice,2023,40722,Byty
+Tábor,2023,41145,Byty
+Plzeňský kraj,2023,47729,Byty
+Domažlice,2023,36223,Byty
+Klatovy,2023,42291,Byty
+Plzeň-jih,2023,39608,Byty
+Plzeň-město,2023,56617,Byty
+Plzeň-sever,2023,41823,Byty
+Rokycany,2023,44182,Byty
+Tachov,2023,37576,Byty
+Karlovarský kraj,2023,33664,Byty
+Cheb,2023,33425,Byty
+Karlovy Vary,2023,37544,Byty
+Sokolov,2023,26110,Byty
+Ústecký kraj,2023,33679,Byty
+Děčín,2023,32724,Byty
+Chomutov,2023,28170,Byty
+Litoměřice,2023,43615,Byty
+Louny,2023,33958,Byty
+Most,2023,29325,Byty
+Teplice,2023,30048,Byty
+Ústí nad Labem,2023,38732,Byty
+Liberecký kraj,2023,45561,Byty
+Česká Lípa,2023,36110,Byty
+Jablonec nad Nisou,2023,41879,Byty
+Liberec,2023,52028,Byty
+Semily,2023,46881,Byty
+Královéhradecký kraj,2023,46442,Byty
+Hradec Králové,2023,59403,Byty
+Jičín,2023,48644,Byty
+Náchod,2023,41155,Byty
+Rychnov nad Kněžnou,2023,39877,Byty
+Trutnov,2023,39829,Byty
+Pardubický kraj,2023,49255,Byty
+Chrudim,2023,39174,Byty
+Pardubice,2023,57323,Byty
+Svitavy,2023,41539,Byty
+Ústí nad Orlicí,2023,40544,Byty
+Kraj Vysočina,2023,46665,Byty
+Havlíčkův Brod,2023,42280,Byty
+Jihlava,2023,51502,Byty
+Pelhřimov,2023,41765,Byty
+Třebíč,2023,47062,Byty
+Žďár nad Sázavou,2023,45664,Byty
+Jihomoravský kraj,2023,65525,Byty
+Blansko,2023,54088,Byty
+Brno-město,2023,77827,Byty
+Brno-venkov,2023,52672,Byty
+Břeclav,2023,47695,Byty
+Hodonín,2023,44593,Byty
+Vyškov,2023,53716,Byty
+Znojmo,2023,45407,Byty
+Olomoucký kraj,2023,45595,Byty
+Jeseník,2023,35462,Byty
+Olomouc,2023,55113,Byty
+Prostějov,2023,42691,Byty
+Přerov,2023,39043,Byty
+Šumperk,2023,38260,Byty
+Zlínský kraj,2023,45163,Byty
+Kroměříž,2023,41584,Byty
+Uherské Hradiště,2023,46146,Byty
+Vsetín,2023,44242,Byty
+Zlín,2023,50572,Byty
+Moravskoslezský kraj,2023,38362,Byty
+Bruntál,2023,29415,Byty
+Frýdek-Místek,2023,41649,Byty
+Karviná,2023,29369,Byty
+Nový Jičín,2023,38201,Byty
+Opava,2023,43002,Byty
+Ostrava-město,2023,42813,Byty
+Česká republika,2019,46408,Byty
+Hlavní město Praha,2019,88629,Byty
+Středočeský kraj,2019,38494,Byty
+Benešov,2019,36467,Byty
+Beroun,2019,38618,Byty
+Kladno,2019,46388,Byty
+Kolín,2019,34628,Byty
+Kutná Hora,2019,31793,Byty
+Mělník,2019,37967,Byty
+Mladá Boleslav,2019,37562,Byty
+Nymburk,2019,36783,Byty
+Praha-východ,2019,40851,Byty
+Praha-západ,2019,40484,Byty
+Příbram,2019,34241,Byty
+Rakovník,2019,32342,Byty
+Jihočeský kraj,2019,34491,Byty
+České Budějovice,2019,42683,Byty
+Český Krumlov,2019,28973,Byty
+Jindřichův Hradec,2019,27598,Byty
+Písek,2019,29770,Byty
+Prachatice,2019,25790,Byty
+Strakonice,2019,28957,Byty
+Tábor,2019,30509,Byty
+Plzeňský kraj,2019,36112,Byty
+Domažlice,2019,27552,Byty
+Klatovy,2019,27633,Byty
+Plzeň-jih,2019,28162,Byty
+Plzeň-město,2019,44638,Byty
+Plzeň-sever,2019,31608,Byty
+Rokycany,2019,32534,Byty
+Tachov,2019,26122,Byty
+Karlovarský kraj,2019,25478,Byty
+Cheb,2019,25597,Byty
+Karlovy Vary,2019,27662,Byty
+Sokolov,2019,19101,Byty
+Ústecký kraj,2019,25469,Byty
+Děčín,2019,22828,Byty
+Chomutov,2019,21380,Byty
+Litoměřice,2019,30688,Byty
+Louny,2019,24732,Byty
+Most,2019,23224,Byty
+Teplice,2019,23242,Byty
+Ústí nad Labem,2019,30152,Byty
+Liberecký kraj,2019,33253,Byty
+Česká Lípa,2019,25172,Byty
+Jablonec nad Nisou,2019,31176,Byty
+Liberec,2019,39089,Byty
+Semily,2019,29128,Byty
+Královéhradecký kraj,2019,33969,Byty
+Hradec Králové,2019,46301,Byty
+Jičín,2019,31929,Byty
+Náchod,2019,24716,Byty
+Rychnov nad Kněžnou,2019,30670,Byty
+Trutnov,2019,29143,Byty
+Pardubický kraj,2019,35831,Byty
+Chrudim,2019,29999,Byty
+Pardubice,2019,42408,Byty
+Svitavy,2019,29485,Byty
+Ústí nad Orlicí,2019,29704,Byty
+Kraj Vysočina,2019,33910,Byty
+Havlíčkův Brod,2019,28086,Byty
+Jihlava,2019,38417,Byty
+Pelhřimov,2019,29179,Byty
+Třebíč,2019,32638,Byty
+Žďár nad Sázavou,2019,34996,Byty
+Jihomoravský kraj,2019,48273,Byty
+Blansko,2019,33414,Byty
+Brno-město,2019,59583,Byty
+Brno-venkov,2019,37705,Byty
+Břeclav,2019,35064,Byty
+Hodonín,2019,31157,Byty
+Vyškov,2019,36820,Byty
+Znojmo,2019,33233,Byty
+Olomoucký kraj,2019,33677,Byty
+Jeseník,2019,23784,Byty
+Olomouc,2019,41301,Byty
+Prostějov,2019,30894,Byty
+Přerov,2019,27782,Byty
+Šumperk,2019,28544,Byty
+Zlínský kraj,2019,33185,Byty
+Kroměříž,2019,29944,Byty
+Uherské Hradiště,2019,33904,Byty
+Vsetín,2019,31449,Byty
+Zlín,2019,38596,Byty
+Moravskoslezský kraj,2019,29224,Byty
+Bruntál,2019,21040,Byty
+Frýdek-Místek,2019,30711,Byty
+Karviná,2019,23351,Byty
+Nový Jičín,2019,26519,Byty
+Opava,2019,32209,Byty
+Ostrava-město,2019,32700,Byty
+Česká republika,2020,53222,Byty
+Hlavní město Praha,2020,99503,Byty
+Středočeský kraj,2020,45938,Byty
+Benešov,2020,43011,Byty
+Beroun,2020,44371,Byty
+Kladno,2020,54817,Byty
+Kolín,2020,42902,Byty
+Kutná Hora,2020,38861,Byty
+Mělník,2020,46384,Byty
+Mladá Boleslav,2020,45614,Byty
+Nymburk,2020,43106,Byty
+Praha-východ,2020,48614,Byty
+Praha-západ,2020,46503,Byty
+Příbram,2020,41085,Byty
+Rakovník,2020,36347,Byty
+Jihočeský kraj,2020,41082,Byty
+České Budějovice,2020,49473,Byty
+Český Krumlov,2020,34586,Byty
+Jindřichův Hradec,2020,34825,Byty
+Písek,2020,37693,Byty
+Prachatice,2020,29742,Byty
+Strakonice,2020,35258,Byty
+Tábor,2020,36988,Byty
+Plzeňský kraj,2020,42675,Byty
+Domažlice,2020,32726,Byty
+Klatovy,2020,34897,Byty
+Plzeň-jih,2020,33184,Byty
+Plzeň-město,2020,52727,Byty
+Plzeň-sever,2020,37545,Byty
+Rokycany,2020,37755,Byty
+Tachov,2020,30548,Byty
+Karlovarský kraj,2020,30222,Byty
+Cheb,2020,29606,Byty
+Karlovy Vary,2020,33272,Byty
+Sokolov,2020,23509,Byty
+Ústecký kraj,2020,30299,Byty
+Děčín,2020,27885,Byty
+Chomutov,2020,25022,Byty
+Litoměřice,2020,37181,Byty
+Louny,2020,30830,Byty
+Most,2020,28254,Byty
+Teplice,2020,27102,Byty
+Ústí nad Labem,2020,35477,Byty
+Liberecký kraj,2020,39505,Byty
+Česká Lípa,2020,31493,Byty
+Jablonec nad Nisou,2020,36880,Byty
+Liberec,2020,45995,Byty
+Semily,2020,34478,Byty
+Královéhradecký kraj,2020,40137,Byty
+Hradec Králové,2020,55793,Byty
+Jičín,2020,36690,Byty
+Náchod,2020,30339,Byty
+Rychnov nad Kněžnou,2020,36208,Byty
+Trutnov,2020,34830,Byty
+Pardubický kraj,2020,42244,Byty
+Chrudim,2020,35430,Byty
+Pardubice,2020,50069,Byty
+Svitavy,2020,34613,Byty
+Ústí nad Orlicí,2020,35104,Byty
+Kraj Vysočina,2020,39903,Byty
+Havlíčkův Brod,2020,33729,Byty
+Jihlava,2020,44323,Byty
+Pelhřimov,2020,35017,Byty
+Třebíč,2020,38660,Byty
+Žďár nad Sázavou,2020,41963,Byty
+Jihomoravský kraj,2020,55888,Byty
+Blansko,2020,38720,Byty
+Brno-město,2020,69210,Byty
+Brno-venkov,2020,42592,Byty
+Břeclav,2020,42923,Byty
+Hodonín,2020,37854,Byty
+Vyškov,2020,41530,Byty
+Znojmo,2020,39170,Byty
+Olomoucký kraj,2020,39858,Byty
+Jeseník,2020,30290,Byty
+Olomouc,2020,48331,Byty
+Prostějov,2020,37257,Byty
+Přerov,2020,33234,Byty
+Šumperk,2020,33784,Byty
+Zlínský kraj,2020,38849,Byty
+Kroměříž,2020,34972,Byty
+Uherské Hradiště,2020,39481,Byty
+Vsetín,2020,38027,Byty
+Zlín,2020,44561,Byty
+Moravskoslezský kraj,2020,34852,Byty
+Bruntál,2020,26112,Byty
+Frýdek-Místek,2020,36608,Byty
+Karviná,2020,27684,Byty
+Nový Jičín,2020,32619,Byty
+Opava,2020,37604,Byty
+Ostrava-město,2020,39119,Byty
+Česká republika,2021,57899,Byty
+Hlavní město Praha,2021,105082,Byty
+Středočeský kraj,2021,51514,Byty
+Benešov,2021,47791,Byty
+Beroun,2021,50239,Byty
+Kladno,2021,60556,Byty
+Kolín,2021,49364,Byty
+Kutná Hora,2021,44123,Byty
+Mělník,2021,51812,Byty
+Mladá Boleslav,2021,51964,Byty
+Nymburk,2021,47413,Byty
+Praha-východ,2021,53641,Byty
+Praha-západ,2021,49774,Byty
+Příbram,2021,46812,Byty
+Rakovník,2021,42512,Byty
+Jihočeský kraj,2021,45749,Byty
+České Budějovice,2021,53925,Byty
+Český Krumlov,2021,39985,Byty
+Jindřichův Hradec,2021,39510,Byty
+Písek,2021,42332,Byty
+Prachatice,2021,34565,Byty
+Strakonice,2021,39420,Byty
+Tábor,2021,41383,Byty
+Plzeňský kraj,2021,47262,Byty
+Domažlice,2021,35358,Byty
+Klatovy,2021,41067,Byty
+Plzeň-jih,2021,38258,Byty
+Plzeň-město,2021,57391,Byty
+Plzeň-sever,2021,41012,Byty
+Rokycany,2021,42559,Byty
+Tachov,2021,34579,Byty
+Karlovarský kraj,2021,33094,Byty
+Cheb,2021,32485,Byty
+Karlovy Vary,2021,36630,Byty
+Sokolov,2021,25794,Byty
+Ústecký kraj,2021,33451,Byty
+Děčín,2021,31650,Byty
+Chomutov,2021,27474,Byty
+Litoměřice,2021,42047,Byty
+Louny,2021,34207,Byty
+Most,2021,29872,Byty
+Teplice,2021,29799,Byty
+Ústí nad Labem,2021,38995,Byty
+Liberecký kraj,2021,44210,Byty
+Česká Lípa,2021,35910,Byty
+Jablonec nad Nisou,2021,41200,Byty
+Liberec,2021,50308,Byty
+Semily,2021,41879,Byty
+Královéhradecký kraj,2021,44915,Byty
+Hradec Králové,2021,60751,Byty
+Jičín,2021,43179,Byty
+Náchod,2021,36401,Byty
+Rychnov nad Kněžnou,2021,39637,Byty
+Trutnov,2021,38521,Byty
+Pardubický kraj,2021,47195,Byty
+Chrudim,2021,39415,Byty
+Pardubice,2021,56218,Byty
+Svitavy,2021,38969,Byty
+Ústí nad Orlicí,2021,38536,Byty
+Kraj Vysočina,2021,44518,Byty
+Havlíčkův Brod,2021,38963,Byty
+Jihlava,2021,49034,Byty
+Pelhřimov,2021,39380,Byty
+Třebíč,2021,43595,Byty
+Žďár nad Sázavou,2021,45984,Byty
+Jihomoravský kraj,2021,62580,Byty
+Blansko,2021,45631,Byty
+Brno-město,2021,76704,Byty
+Brno-venkov,2021,48053,Byty
+Břeclav,2021,47075,Byty
+Hodonín,2021,43691,Byty
+Vyškov,2021,47809,Byty
+Znojmo,2021,43497,Byty
+Olomoucký kraj,2021,44264,Byty
+Jeseník,2021,33874,Byty
+Olomouc,2021,53315,Byty
+Prostějov,2021,41542,Byty
+Přerov,2021,37673,Byty
+Šumperk,2021,37656,Byty
+Zlínský kraj,2021,43627,Byty
+Kroměříž,2021,40291,Byty
+Uherské Hradiště,2021,44002,Byty
+Vsetín,2021,42506,Byty
+Zlín,2021,49242,Byty
+Moravskoslezský kraj,2021,38484,Byty
+Bruntál,2021,29263,Byty
+Frýdek-Místek,2021,41328,Byty
+Karviná,2021,29653,Byty
+Nový Jičín,2021,36891,Byty
+Opava,2021,42200,Byty
+Ostrava-město,2021,43486,Byty

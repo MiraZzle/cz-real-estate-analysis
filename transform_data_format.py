@@ -53,50 +53,51 @@ def transform_regional_prices_to_csv(file_names):
     return output_dataset
 
 
-def transform_avg_regional_prices_to_csv(file_path):
+def transform_avg_regional_prices_to_csv(file_path: str) -> pd.DataFrame:
+    """
+    Transforms the Excel file into a long-format DataFrame for 'Rodinné domy' and 'Byty'
+    """
     try:
-        data = pd.read_excel(file_path, skiprows=5, engine="openpyxl")
-        data = data.iloc[:, 1:12]
-        data = data[:-4]
+        # Load the Excel file and drop the footer rows
+        df_raw = pd.read_excel(file_path, skiprows=5, engine="openpyxl")
+        df_raw = df_raw.iloc[:-4]
 
-        year_headers = data.iloc[0]
-        data = data[1:]
+        # Extract the region names and headers
+        regions = df_raw.iloc[1:, 1].reset_index(drop=True)  # column 1 = region names
+        headers = df_raw.iloc[0, 2:]  # starting from column 2 for Rodinné domy and Byty
 
-        new_columns = ["region"]
-        valid_column_indices = []
+        # Extract the data for Rodinné domy (columns 2–9) and Byty (columns 10–17)
+        rodinne_data = df_raw.iloc[1:, 2:10].reset_index(drop=True)
+        byty_data = df_raw.iloc[1:, 10:18].reset_index(drop=True)
 
-        for idx, label in enumerate(year_headers[1:], start=1):
-            if isinstance(label, str) and re.match(r"^\D*(\d{4})\D*$", label):
-                new_columns.append(label)
-                valid_column_indices.append(idx)
+        # Assign proper column headers
+        rodinne_data.columns = headers[:8]
+        byty_data.columns = headers[8:16]
 
-        selected_columns = [0] + valid_column_indices
-        data = data.iloc[:, selected_columns]
-        data.columns = new_columns
+        # Add region names
+        rodinne_data.insert(0, "region", regions)
+        byty_data.insert(0, "region", regions)
 
-        long_df = pd.melt(data, id_vars="region", var_name="year", value_name="price")
-        long_df = long_df.dropna(subset=["price"])
-        long_df["year"] = long_df["year"].astype(str).str.extract(r"(\d{4})")
-        long_df["price"] = pd.to_numeric(long_df["price"], errors="coerce")
-        long_df = long_df.dropna(subset=["year", "price"])
+        # Melt into long format
+        df_rodinne = pd.melt(rodinne_data, id_vars="region", var_name="year", value_name="price")
+        df_byty = pd.melt(byty_data, id_vars="region", var_name="year", value_name="price")
 
-        rodinne_domy_years = year_headers[1:9].dropna().astype(str).str.extract(r"(\d{4})")[0].dropna().tolist()
-        byty_years = year_headers[9:].dropna().astype(str).str.extract(r"(\d{4})")[0].dropna().tolist()
+        # Clean and add type info
+        df_rodinne["year"] = df_rodinne["year"].astype(str).str.extract(r"(\d{4})")
+        df_rodinne["type"] = "Rodinné domy"
 
-        def determine_type(year):
-            if year in rodinne_domy_years:
-                return "Rodinné domy"
-            elif year in byty_years:
-                return "Byty"
-            return None
+        df_byty["year"] = df_byty["year"].astype(str).str.extract(r"(\d{4})")
+        df_byty["type"] = "Byty"
 
-        long_df["type"] = long_df["year"].apply(determine_type)
-        long_df = long_df.dropna(subset=["type"])
+        # Combine both
+        combined = pd.concat([df_rodinne, df_byty], ignore_index=True)
+        combined["price"] = pd.to_numeric(combined["price"], errors="coerce")
+        combined = combined.dropna(subset=["region", "year", "price", "type"])
 
-        return long_df
+        return combined[["region", "year", "price", "type"]]
 
     except Exception as e:
-        logging.error(f"Error reading Excel content: {e}")
+        logging.error(f"Error reading and transforming Excel content: {e}")
         raise
 
 
