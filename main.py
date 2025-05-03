@@ -61,6 +61,204 @@ import matplotlib.pyplot as plt
 import urllib.request as urllib2
 import numpy as np
 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    From raw avg_prices_regions.csv data, computes the top-growing district in each kraj
+    based on percentual flat price growth (2019–2023).
+    """
+    # District-to-Kraj mapping
+    kraj_districts_raw = """
+    Hlavní město Praha
+    Středočeský kraj
+    Benešov
+    Beroun
+    Kladno
+    Kolín
+    Kutná Hora
+    Mělník
+    Mladá Boleslav
+    Nymburk
+    Praha-východ
+    Praha-západ
+    Příbram
+    Rakovník
+    Jihočeský kraj
+    České Budějovice
+    Český Krumlov
+    Jindřichův Hradec
+    Písek
+    Prachatice
+    Strakonice
+    Tábor
+    Plzeňský kraj
+    Domažlice
+    Klatovy
+    Plzeň-jih
+    Plzeň-město
+    Plzeň-sever
+    Rokycany
+    Tachov
+    Karlovarský kraj
+    Cheb
+    Karlovy Vary
+    Sokolov
+    Ústecký kraj
+    Děčín
+    Chomutov
+    Litoměřice
+    Louny
+    Most
+    Teplice
+    Ústí nad Labem
+    Liberecký kraj
+    Česká Lípa
+    Jablonec nad Nisou
+    Liberec
+    Semily
+    Královéhradecký kraj
+    Hradec Králové
+    Jičín
+    Náchod
+    Rychnov nad Kněžnou
+    Trutnov
+    Pardubický kraj
+    Chrudim
+    Pardubice
+    Svitavy
+    Ústí nad Orlicí
+    Kraj Vysočina
+    Havlíčkův Brod
+    Jihlava
+    Pelhřimov
+    Třebíč
+    Žďár nad Sázavou
+    Jihomoravský kraj
+    Blansko
+    Brno-město
+    Brno-venkov
+    Břeclav
+    Hodonín
+    Vyškov
+    Znojmo
+    Olomoucký kraj
+    Jeseník
+    Olomouc
+    Prostějov
+    Přerov
+    Šumperk
+    Zlínský kraj
+    Kroměříž
+    Uherské Hradiště
+    Vsetín
+    Zlín
+    Moravskoslezský kraj
+    Bruntál
+    Frýdek-Místek
+    Karviná
+    Nový Jičín
+    Opava
+    Ostrava-město
+    """
+    lines = [line.strip() for line in kraj_districts_raw.strip().splitlines()]
+    district_to_kraj = {}
+    current_kraj = None
+    for line in lines:
+        if "kraj" in line or "Praha" in line:
+            current_kraj = "Vysočina" if line == "Kraj Vysočina" else line
+        else:
+            district_to_kraj[line] = current_kraj
+
+    # Map kraje
+    data = data.copy()
+    data["kraj"] = data["region"].map(district_to_kraj)
+
+    # Filter for flats and years
+    filtered = data[(data["type"] == "Byty") & (data["year"].isin([2019, 2023]))]
+
+    # Pivot to get 2019 and 2023 columns
+    pivot = filtered.pivot_table(index=["region", "kraj"], columns="year", values="price")
+    pivot = pivot.dropna(subset=[2019, 2023])
+    pivot["growth_index"] = (pivot[2023] / pivot[2019]) * 100
+    pivot = pivot.reset_index()
+
+    # Get top-growing district per kraj
+    top_districts = pivot.loc[pivot.groupby("kraj")["growth_index"].idxmax()]
+    return top_districts
+
+
+def plot_growth_scatter_with_adjustments(df: pd.DataFrame, show: bool = True) -> plt.Figure:
+    """
+    Scatter plot of top-growing districts per kraj.
+    - X: Flat price in 2019
+    - Y: Percentual growth (2019 = 100%)
+    - Highlights top 3 fastest-growing districts in red
+    - Annotates all points with 'kraj: district'
+    - Displays 2023 price below each point
+    """
+    fig, ax = plt.subplots(figsize=(12, 6))
+    df = prepare_top_growing_districts(df)
+
+    x = df[2019]
+    y = df["growth_index"]
+    labels = df["kraj"] + ": " + df["region"]
+    prices_2023 = df[2023]
+
+    # Top 3 by growth
+    top3 = df.nlargest(3, "growth_index")
+
+    # Plot all points
+    ax.scatter(x, y, color="royalblue", s=60, zorder=2)
+
+    # Highlight top 3 in red
+    ax.scatter(top3[2019], top3["growth_index"], color="crimson", s=80, zorder=3, edgecolors="black")
+    x_range = x.max() - x.min()
+
+    # Annotate each point
+    for xi, yi, label, price, region in zip(x, y, labels, prices_2023, df["region"]):
+        dx, dy = 0, 1.5  # general upward shift
+        dx = 0.01 * x_range  # e.g., shift by ~100–200 CZK
+        if region == "Prachatice":
+            dy = 2.5
+        if region == "Jeseník":
+            dy = -4
+            dx = 0.02 * x_range
+        if region == "Kolín":
+            dx = -0.08 * x_range
+            dy = 0
+        if region == "Blansko":
+            dx = -0.03 * x_range
+
+            # Draw pointer line from original position to label
+        if region in ["Prachatice", "Jeseník"]:
+            ax.plot([xi, xi + dx], [yi, yi + dy], color="blue", linewidth=0.8, linestyle="--", zorder=1)
+
+        ax.text(xi + dx, yi + dy, label, fontsize=8, ha="center", va="bottom")
+        ax.text(xi, yi - 0.85, f"{int(price):,} CZK", fontsize=7, ha="center", va="top", color="gray")
+
+    ax.set_xlabel("Flat Price in 2019 (CZK/m²)")
+    ax.set_ylabel("Normalized Growth (2019 = 100%)")
+    ax.set_title("Growth vs. Starting Price for Top-Growing Districts per Kraj (2019–2023)\n2023 Prices Shown")
+    buffer_x = (x.max() - x.min()) * 0.05
+    buffer_y = (y.max() - y.min()) * 0.05
+    ax.set_xlim(x.min() - buffer_x, x.max() + buffer_x)
+    ax.set_ylim(y.min() - buffer_y, y.max() + buffer_y + 3)
+
+    ax.grid(True)
+    plt.tight_layout()
+
+    if show:
+        plt.show()
+
+    return fig
+
 
 def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
@@ -388,12 +586,14 @@ def main(show_plots: bool):
     q2_plot = plot_price_growth_over_years(avg_region_prices_df, property_type="Byty", top_n=10, show=show_plots)
     q3_plot = plot_growth_comparison_kraje(avg_region_prices_df, show=show_plots)
     q4_plot = plot_kraj_disparity_from_avg_prices(avg_region_prices_df, show=show_plots)
+    q5_plot = plot_growth_scatter_with_adjustments(avg_region_prices_df, show=show_plots)
 
     os.makedirs("output", exist_ok=True)
     save_figure_to_pdf(q1_plot, "output/flat_prices_2023.pdf")
     save_figure_to_pdf(q2_plot, "output/price_growth_byty.pdf")
     save_figure_to_pdf(q3_plot, "output/price_growth_comparison_kraje.pdf")
     save_figure_to_pdf(q4_plot, "output/kraj_flat_price_disparity.pdf")
+    save_figure_to_pdf(q5_plot, "output/growth_scatter.pdf")
 
 
 if __name__ == "__main__":
