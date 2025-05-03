@@ -17,7 +17,6 @@ import sys
 Which regions had the highest average flat prices in 2023?
 Which regions had the largest gap between house and flat prices?
 Which regions saw the greatest percentage increase in property prices over time?
-Correlation heatmap between different price bands (e.g., 2k–10k, 10k–50k) across regions
 Which regions consistently had high prices across years (top 5 every year)?
 Comparison of price trend stability across regions
 Which regions show the highest disparity between house and flat prices?
@@ -49,24 +48,12 @@ def save_figure_to_pdf(fig, filename):
         plt.close(fig)
 
 
-import pandas as pd
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import urllib.request as urllib2
-
-
-import pandas as pd
-import geopandas as gpd
-import matplotlib.pyplot as plt
-import urllib.request as urllib2
-import numpy as np
-
-import pandas as pd
-import matplotlib.pyplot as plt
-
-
-import pandas as pd
-import matplotlib.pyplot as plt
+def save_figure_to_png(fig, filename):
+    """
+    Save a figure to a PNG file.
+    """
+    fig.savefig(filename, bbox_inches="tight", dpi=300)
+    plt.close(fig)
 
 
 def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
@@ -708,14 +695,26 @@ def main(show_plots: bool):
     q6_plot = plot_house_price_shift_by_city_size(regional_prices_df, show=show_plots)
     q7_plot = plot_kraje_price_rankings(avg_region_prices_df, show=show_plots)
 
-    os.makedirs("output", exist_ok=True)
-    save_figure_to_pdf(q1_plot, "output/flat_prices_2023.pdf")
-    save_figure_to_pdf(q2_plot, "output/price_growth_byty.pdf")
-    save_figure_to_pdf(q3_plot, "output/price_growth_comparison_kraje.pdf")
-    save_figure_to_pdf(q4_plot, "output/kraj_flat_price_disparity.pdf")
-    save_figure_to_pdf(q5_plot, "output/growth_scatter.pdf")
-    save_figure_to_pdf(q6_plot, "output/house_price_shift_by_city_size.pdf")
-    save_figure_to_pdf(q7_plot, "output/kraje_price_rankings.pdf")
+    pdf_dir = "output/pdfs"
+    png_dir = "output/pngs"
+
+    os.makedirs(pdf_dir, exist_ok=True)
+    save_figure_to_pdf(q1_plot, f"{pdf_dir}/flat_prices_2023.pdf")
+    save_figure_to_pdf(q2_plot, f"{pdf_dir}/price_growth_byty.pdf")
+    save_figure_to_pdf(q3_plot, f"{pdf_dir}/price_growth_comparison_kraje.pdf")
+    save_figure_to_pdf(q4_plot, f"{pdf_dir}/kraj_flat_price_disparity.pdf")
+    save_figure_to_pdf(q5_plot, f"{pdf_dir}/growth_scatter.pdf")
+    save_figure_to_pdf(q6_plot, f"{pdf_dir}/house_price_shift_by_city_size.pdf")
+    save_figure_to_pdf(q7_plot, f"{pdf_dir}/kraje_price_rankings.pdf")
+
+    os.makedirs(png_dir, exist_ok=True)
+    save_figure_to_png(q1_plot, f"{png_dir}/flat_prices_2023.png")
+    save_figure_to_png(q2_plot, f"{png_dir}/price_growth_byty.png")
+    save_figure_to_png(q3_plot, f"{png_dir}/price_growth_comparison_kraje.png")
+    save_figure_to_png(q4_plot, f"{png_dir}/kraj_flat_price_disparity.png")
+    save_figure_to_png(q5_plot, f"{png_dir}/growth_scatter.png")
+    save_figure_to_png(q6_plot, f"{png_dir}/house_price_shift_by_city_size.png")
+    save_figure_to_png(q7_plot, f"{png_dir}/kraje_price_rankings.png")
 
 
 if __name__ == "__main__":
