@@ -577,6 +577,58 @@ def plot_flat_prices_2023(prices_df: pd.DataFrame, show: bool = True) -> plt.Fig
     return fig
 
 
+def plot_house_price_shift_by_city_size(regional_df: pd.DataFrame, show: bool = True) -> plt.Figure:
+    """
+    Compares house price distributions by city size before and after COVID.
+    Shows two boxplots side-by-side: one for 2019–2021 and one for 2021–2023.
+    City size is defined by population group.
+    """
+    # Filter for the two time periods
+    df_early = regional_df[regional_df["time_period"] == "2019-2021"]
+    df_late = regional_df[regional_df["time_period"] == "2021-2023"]
+
+    # Select relevant house price columns by population group
+    melt_cols = ["house_price_2k_10k", "house_price_10k_50k", "house_price_50k_plus"]
+
+    # Melt into long format
+    melted_early = df_early[melt_cols].melt(var_name="pop_group", value_name="price").dropna()
+    melted_late = df_late[melt_cols].melt(var_name="pop_group", value_name="price").dropna()
+
+    # Rename population groups for readability
+    group_map = {"house_price_2k_10k": "2k–10k", "house_price_10k_50k": "10k–50k", "house_price_50k_plus": "50k+"}
+    melted_early["pop_group"] = melted_early["pop_group"].map(group_map)
+    melted_late["pop_group"] = melted_late["pop_group"].map(group_map)
+
+    # Add period labels
+    melted_early["period"] = "2019–2021"
+    melted_late["period"] = "2021–2023"
+
+    # Combine and clean
+    combined = pd.concat([melted_early, melted_late], ignore_index=True)
+    combined["price"] = pd.to_numeric(combined["price"], errors="coerce")
+    combined = combined.dropna(subset=["price"])
+
+    # Create boxplots
+    fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharey=True)
+
+    sns.boxplot(data=combined[combined["period"] == "2019–2021"], x="pop_group", y="price", ax=axes[0])
+    axes[0].set_title("House Prices by City Size (2019–2021)")
+    axes[0].set_xlabel("City Size")
+    axes[0].set_ylabel("Price per m²")
+    axes[0].grid(True)
+
+    sns.boxplot(data=combined[combined["period"] == "2021–2023"], x="pop_group", y="price", ax=axes[1])
+    axes[1].set_title("House Prices by City Size (2021–2023)")
+    axes[1].set_xlabel("City Size")
+    axes[1].set_ylabel("Price per m²")
+    axes[1].grid(True)
+
+    plt.tight_layout()
+    if show:
+        plt.show()
+    return fig
+
+
 def main(show_plots: bool):
     avg_region_prices_df = load_csv_to_dataframe("data/csv/avg_prices_regions.csv")
     ooh_df = load_csv_to_dataframe("data/csv/ooh_data.csv")
@@ -587,6 +639,7 @@ def main(show_plots: bool):
     q3_plot = plot_growth_comparison_kraje(avg_region_prices_df, show=show_plots)
     q4_plot = plot_kraj_disparity_from_avg_prices(avg_region_prices_df, show=show_plots)
     q5_plot = plot_growth_scatter_with_adjustments(avg_region_prices_df, show=show_plots)
+    q6_plot = plot_house_price_shift_by_city_size(regional_prices_df, show=show_plots)
 
     os.makedirs("output", exist_ok=True)
     save_figure_to_pdf(q1_plot, "output/flat_prices_2023.pdf")
@@ -594,6 +647,7 @@ def main(show_plots: bool):
     save_figure_to_pdf(q3_plot, "output/price_growth_comparison_kraje.pdf")
     save_figure_to_pdf(q4_plot, "output/kraj_flat_price_disparity.pdf")
     save_figure_to_pdf(q5_plot, "output/growth_scatter.pdf")
+    save_figure_to_pdf(q6_plot, "output/house_price_shift_by_city_size.pdf")
 
 
 if __name__ == "__main__":
