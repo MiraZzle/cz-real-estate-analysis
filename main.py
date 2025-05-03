@@ -49,9 +49,190 @@ def save_figure_to_pdf(fig, filename):
         plt.close(fig)
 
 
-import matplotlib.pyplot as plt
-import seaborn as sns
 import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import urllib.request as urllib2
+
+
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+import urllib.request as urllib2
+import numpy as np
+
+
+def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -> plt.Figure:
+    """
+    Computes and plots the intra-kraj disparity in flat prices (max - min across districts)
+    for each Czech region based on avg_prices_regions.csv data.
+    Praha is shown but has no value.
+    """
+    # --- District to kraj mapping ---
+    kraj_districts_raw = """
+    Hlavní město Praha
+    Středočeský kraj
+    Benešov
+    Beroun
+    Kladno
+    Kolín
+    Kutná Hora
+    Mělník
+    Mladá Boleslav
+    Nymburk
+    Praha-východ
+    Praha-západ
+    Příbram
+    Rakovník
+    Jihočeský kraj
+    České Budějovice
+    Český Krumlov
+    Jindřichův Hradec
+    Písek
+    Prachatice
+    Strakonice
+    Tábor
+    Plzeňský kraj
+    Domažlice
+    Klatovy
+    Plzeň-jih
+    Plzeň-město
+    Plzeň-sever
+    Rokycany
+    Tachov
+    Karlovarský kraj
+    Cheb
+    Karlovy Vary
+    Sokolov
+    Ústecký kraj
+    Děčín
+    Chomutov
+    Litoměřice
+    Louny
+    Most
+    Teplice
+    Ústí nad Labem
+    Liberecký kraj
+    Česká Lípa
+    Jablonec nad Nisou
+    Liberec
+    Semily
+    Královéhradecký kraj
+    Hradec Králové
+    Jičín
+    Náchod
+    Rychnov nad Kněžnou
+    Trutnov
+    Pardubický kraj
+    Chrudim
+    Pardubice
+    Svitavy
+    Ústí nad Orlicí
+    Kraj Vysočina
+    Havlíčkův Brod
+    Jihlava
+    Pelhřimov
+    Třebíč
+    Žďár nad Sázavou
+    Jihomoravský kraj
+    Blansko
+    Brno-město
+    Brno-venkov
+    Břeclav
+    Hodonín
+    Vyškov
+    Znojmo
+    Olomoucký kraj
+    Jeseník
+    Olomouc
+    Prostějov
+    Přerov
+    Šumperk
+    Zlínský kraj
+    Kroměříž
+    Uherské Hradiště
+    Vsetín
+    Zlín
+    Moravskoslezský kraj
+    Bruntál
+    Frýdek-Místek
+    Karviná
+    Nový Jičín
+    Opava
+    Ostrava-město
+    """
+    lines = [line.strip() for line in kraj_districts_raw.strip().splitlines()]
+    district_to_kraj = {}
+    current_kraj = None
+    for line in lines:
+        if line == "Kraj Vysočina":
+            current_kraj = line
+        elif "kraj" in line or "Praha" in line:
+            current_kraj = line
+        else:
+            district_to_kraj[line] = current_kraj
+
+    # --- Prepare data ---
+    data = data.copy()
+    data["kraj"] = data["region"].map(district_to_kraj)
+
+    # Filter flats in 2023
+    flats = data[(data["type"] == "Byty") & (data["year"] == 2023)]
+
+    # Compute disparity
+    disparity = (
+        flats[flats["kraj"].notna()]
+        .groupby("kraj")["price"]
+        .agg(lambda x: x.max() - x.min())
+        .reset_index()
+        .rename(columns={"kraj": "name", "price": "disparity"})
+    )
+
+    # Add Praha with NaN
+    disparity = pd.concat(
+        [disparity, pd.DataFrame([{"name": "Hlavní město Praha", "disparity": np.nan}])], ignore_index=True
+    )
+
+    # --- Load Czech region map ---
+    url = "https://raw.githubusercontent.com/Plavit/Simple-Dash-Plotly-Map-Czech-Regions/main/maps/czech-regions-low-res.json"
+    with urllib2.urlopen(url) as f:
+        geo = gpd.read_file(f)
+
+    geo = geo.merge(disparity, on="name", how="left")
+
+    # --- Plot ---
+    fig, ax = plt.subplots(figsize=(10, 6))
+    geo.plot(
+        column="disparity",
+        ax=ax,
+        cmap="OrRd",
+        legend=True,
+        edgecolor="black",
+        missing_kwds={"color": "lightgray", "label": "No data"},
+    )
+
+    ax.set_title("Intra-Kraj Flat Price Disparity (2023)", fontsize=14)
+    ax.axis("off")
+
+    # Annotate values
+    for _, row in geo.iterrows():
+        if pd.notna(row["disparity"]):
+            point = row["geometry"].representative_point()
+            ax.text(
+                point.x,
+                point.y,
+                f'{int(row["disparity"]):,}'.replace(",", " "),
+                ha="center",
+                va="center",
+                fontsize=7,
+                color="black",
+            )
+
+    plt.tight_layout()
+
+    if show:
+        plt.show()
+    return fig
 
 
 def plot_growth_comparison_kraje(data: pd.DataFrame, show: bool = True) -> plt.Figure:
@@ -206,11 +387,13 @@ def main(show_plots: bool):
     q1_plot = plot_flat_prices_2023(avg_region_prices_df, show=show_plots)
     q2_plot = plot_price_growth_over_years(avg_region_prices_df, property_type="Byty", top_n=10, show=show_plots)
     q3_plot = plot_growth_comparison_kraje(avg_region_prices_df, show=show_plots)
+    q4_plot = plot_kraj_disparity_from_avg_prices(avg_region_prices_df, show=show_plots)
 
     os.makedirs("output", exist_ok=True)
     save_figure_to_pdf(q1_plot, "output/flat_prices_2023.pdf")
     save_figure_to_pdf(q2_plot, "output/price_growth_byty.pdf")
     save_figure_to_pdf(q3_plot, "output/price_growth_comparison_kraje.pdf")
+    save_figure_to_pdf(q4_plot, "output/kraj_flat_price_disparity.pdf")
 
 
 if __name__ == "__main__":
