@@ -629,6 +629,72 @@ def plot_house_price_shift_by_city_size(regional_df: pd.DataFrame, show: bool = 
     return fig
 
 
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Figure:
+    """
+    Plots a ranking trajectory of Czech kraje based on average flat prices (2019–2023).
+    Each kraj is assigned a unique color and tracked over time.
+    Rank 1 = Most expensive.
+    """
+    kraje_names = [
+        "Hlavní město Praha",
+        "Středočeský kraj",
+        "Jihočeský kraj",
+        "Plzeňský kraj",
+        "Karlovarský kraj",
+        "Ústecký kraj",
+        "Liberecký kraj",
+        "Královéhradecký kraj",
+        "Pardubický kraj",
+        "Vysočina",
+        "Jihomoravský kraj",
+        "Olomoucký kraj",
+        "Zlínský kraj",
+        "Moravskoslezský kraj",
+    ]
+
+    # Filter for flats and only kraj-level regions
+    kraje_df = (
+        avg_df[(avg_df["region"].isin(kraje_names)) & (avg_df["type"] == "Byty") & (avg_df["year"].between(2019, 2023))]
+        .groupby(["region", "year"])["price"]
+        .mean()
+        .reset_index()
+    )
+
+    # Compute rank per year
+    kraje_df["rank"] = kraje_df.groupby("year")["price"].rank(ascending=False, method="min")
+
+    # Pivot to wide format
+    rank_pivot = kraje_df.pivot(index="region", columns="year", values="rank").dropna()
+
+    # Assign unique colors to each region
+    palette = sns.color_palette("tab20", len(rank_pivot))
+    color_map = {region: palette[i] for i, region in enumerate(rank_pivot.index)}
+
+    # Plot
+    fig, ax = plt.subplots(figsize=(12, 6))
+    for region, row in rank_pivot.iterrows():
+        ax.plot(row.index, row.values, marker="o", label=region, color=color_map[region], linewidth=2)
+
+    ax.set_title("Kraje Ranking by Average Flat Prices (2019–2023)", fontsize=14)
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Rank (1 = Most Expensive)")
+    ax.set_yticks(range(1, len(kraje_names) + 1))
+    ax.invert_yaxis()
+    ax.grid(True)
+    ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize="small", title="Kraj")
+    plt.tight_layout()
+
+    if show:
+        plt.show()
+
+    return fig
+
+
 def main(show_plots: bool):
     avg_region_prices_df = load_csv_to_dataframe("data/csv/avg_prices_regions.csv")
     ooh_df = load_csv_to_dataframe("data/csv/ooh_data.csv")
@@ -640,6 +706,7 @@ def main(show_plots: bool):
     q4_plot = plot_kraj_disparity_from_avg_prices(avg_region_prices_df, show=show_plots)
     q5_plot = plot_growth_scatter_with_adjustments(avg_region_prices_df, show=show_plots)
     q6_plot = plot_house_price_shift_by_city_size(regional_prices_df, show=show_plots)
+    q7_plot = plot_kraje_price_rankings(avg_region_prices_df, show=show_plots)
 
     os.makedirs("output", exist_ok=True)
     save_figure_to_pdf(q1_plot, "output/flat_prices_2023.pdf")
@@ -648,6 +715,7 @@ def main(show_plots: bool):
     save_figure_to_pdf(q4_plot, "output/kraj_flat_price_disparity.pdf")
     save_figure_to_pdf(q5_plot, "output/growth_scatter.pdf")
     save_figure_to_pdf(q6_plot, "output/house_price_shift_by_city_size.pdf")
+    save_figure_to_pdf(q7_plot, "output/kraje_price_rankings.pdf")
 
 
 if __name__ == "__main__":
