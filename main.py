@@ -12,48 +12,9 @@ from matplotlib.backends.backend_pdf import PdfPages
 import os
 import logging
 import sys
-
-"""
-Which regions had the highest average flat prices in 2023?
-Which regions had the largest gap between house and flat prices?
-Which regions saw the greatest percentage increase in property prices over time?
-Which regions consistently had high prices across years (top 5 every year)?
-Comparison of price trend stability across regions
-Which regions show the highest disparity between house and flat prices?
-Which regions have the most volatile property prices?
-
-----
-
-Otazky primo na regionalni ceny:
-Jake regiony mely rust cen bytu v letech 2019-2021?
-"""
+from utils import load_csv_to_dataframe, save_figure_to_pdf, save_figure_to_png, KRAJ_DISTRICTS_RAW, KRAJE_NAMES
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
-
-
-def load_csv_to_dataframe(file_path: str) -> pd.DataFrame:
-    """
-    Load a CSV file into a pandas DataFrame.
-    """
-    df = pd.read_csv(file_path, encoding="utf-8")
-    return df
-
-
-def save_figure_to_pdf(fig, filename):
-    """
-    Save a figure to a PDF file.
-    """
-    with PdfPages(filename) as pdf:
-        pdf.savefig(fig, bbox_inches="tight")
-        plt.close(fig)
-
-
-def save_figure_to_png(fig, filename):
-    """
-    Save a figure to a PNG file.
-    """
-    fig.savefig(filename, bbox_inches="tight", dpi=300)
-    plt.close(fig)
 
 
 def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
@@ -61,100 +22,7 @@ def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
     From raw avg_prices_regions.csv data, computes the top-growing district in each kraj
     based on percentual flat price growth (2019–2023).
     """
-    # District-to-Kraj mapping
-    kraj_districts_raw = """
-    Hlavní město Praha
-    Středočeský kraj
-    Benešov
-    Beroun
-    Kladno
-    Kolín
-    Kutná Hora
-    Mělník
-    Mladá Boleslav
-    Nymburk
-    Praha-východ
-    Praha-západ
-    Příbram
-    Rakovník
-    Jihočeský kraj
-    České Budějovice
-    Český Krumlov
-    Jindřichův Hradec
-    Písek
-    Prachatice
-    Strakonice
-    Tábor
-    Plzeňský kraj
-    Domažlice
-    Klatovy
-    Plzeň-jih
-    Plzeň-město
-    Plzeň-sever
-    Rokycany
-    Tachov
-    Karlovarský kraj
-    Cheb
-    Karlovy Vary
-    Sokolov
-    Ústecký kraj
-    Děčín
-    Chomutov
-    Litoměřice
-    Louny
-    Most
-    Teplice
-    Ústí nad Labem
-    Liberecký kraj
-    Česká Lípa
-    Jablonec nad Nisou
-    Liberec
-    Semily
-    Královéhradecký kraj
-    Hradec Králové
-    Jičín
-    Náchod
-    Rychnov nad Kněžnou
-    Trutnov
-    Pardubický kraj
-    Chrudim
-    Pardubice
-    Svitavy
-    Ústí nad Orlicí
-    Kraj Vysočina
-    Havlíčkův Brod
-    Jihlava
-    Pelhřimov
-    Třebíč
-    Žďár nad Sázavou
-    Jihomoravský kraj
-    Blansko
-    Brno-město
-    Brno-venkov
-    Břeclav
-    Hodonín
-    Vyškov
-    Znojmo
-    Olomoucký kraj
-    Jeseník
-    Olomouc
-    Prostějov
-    Přerov
-    Šumperk
-    Zlínský kraj
-    Kroměříž
-    Uherské Hradiště
-    Vsetín
-    Zlín
-    Moravskoslezský kraj
-    Bruntál
-    Frýdek-Místek
-    Karviná
-    Nový Jičín
-    Opava
-    Ostrava-město
-    """
-    lines = [line.strip() for line in kraj_districts_raw.strip().splitlines()]
+    lines = [line.strip() for line in KRAJ_DISTRICTS_RAW.strip().splitlines()]
     district_to_kraj = {}
     current_kraj = None
     for line in lines:
@@ -253,100 +121,7 @@ def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -
     for each Czech region based on avg_prices_regions.csv data.
     Praha is shown but has no value.
     """
-    # --- District to kraj mapping ---
-    kraj_districts_raw = """
-    Hlavní město Praha
-    Středočeský kraj
-    Benešov
-    Beroun
-    Kladno
-    Kolín
-    Kutná Hora
-    Mělník
-    Mladá Boleslav
-    Nymburk
-    Praha-východ
-    Praha-západ
-    Příbram
-    Rakovník
-    Jihočeský kraj
-    České Budějovice
-    Český Krumlov
-    Jindřichův Hradec
-    Písek
-    Prachatice
-    Strakonice
-    Tábor
-    Plzeňský kraj
-    Domažlice
-    Klatovy
-    Plzeň-jih
-    Plzeň-město
-    Plzeň-sever
-    Rokycany
-    Tachov
-    Karlovarský kraj
-    Cheb
-    Karlovy Vary
-    Sokolov
-    Ústecký kraj
-    Děčín
-    Chomutov
-    Litoměřice
-    Louny
-    Most
-    Teplice
-    Ústí nad Labem
-    Liberecký kraj
-    Česká Lípa
-    Jablonec nad Nisou
-    Liberec
-    Semily
-    Královéhradecký kraj
-    Hradec Králové
-    Jičín
-    Náchod
-    Rychnov nad Kněžnou
-    Trutnov
-    Pardubický kraj
-    Chrudim
-    Pardubice
-    Svitavy
-    Ústí nad Orlicí
-    Kraj Vysočina
-    Havlíčkův Brod
-    Jihlava
-    Pelhřimov
-    Třebíč
-    Žďár nad Sázavou
-    Jihomoravský kraj
-    Blansko
-    Brno-město
-    Brno-venkov
-    Břeclav
-    Hodonín
-    Vyškov
-    Znojmo
-    Olomoucký kraj
-    Jeseník
-    Olomouc
-    Prostějov
-    Přerov
-    Šumperk
-    Zlínský kraj
-    Kroměříž
-    Uherské Hradiště
-    Vsetín
-    Zlín
-    Moravskoslezský kraj
-    Bruntál
-    Frýdek-Místek
-    Karviná
-    Nový Jičín
-    Opava
-    Ostrava-město
-    """
-    lines = [line.strip() for line in kraj_districts_raw.strip().splitlines()]
+    lines = [line.strip() for line in KRAJ_DISTRICTS_RAW.strip().splitlines()]
     district_to_kraj = {}
     current_kraj = None
     for line in lines:
@@ -425,23 +200,6 @@ def plot_growth_comparison_kraje(data: pd.DataFrame, show: bool = True) -> plt.F
     Filters raw price data, computes normalized growth (2019–2023), and plots a grouped bar chart
     for Czech kraje and Prague comparing flats and houses. Returns the Figure object.
     """
-    # Define official kraje and Prague
-    kraje_names = [
-        "Hlavní město Praha",
-        "Středočeský kraj",
-        "Jihočeský kraj",
-        "Plzeňský kraj",
-        "Karlovarský kraj",
-        "Ústecký kraj",
-        "Liberecký kraj",
-        "Královéhradecký kraj",
-        "Pardubický kraj",
-        "Vysočina",
-        "Jihomoravský kraj",
-        "Olomoucký kraj",
-        "Zlínský kraj",
-        "Moravskoslezský kraj",
-    ]
 
     # Filter for relevant years and types
     df = data[data["year"].isin([2019, 2023]) & data["type"].isin(["Byty", "Rodinné domy"])]
@@ -457,7 +215,7 @@ def plot_growth_comparison_kraje(data: pd.DataFrame, show: bool = True) -> plt.F
     pivot = pivot.rename(columns={2019: "price_2019", 2023: "price_2023"}).reset_index()
 
     # Filter only kraje + Prague
-    pivot = pivot[pivot["region"].isin(kraje_names)]
+    pivot = pivot[pivot["region"].isin(KRAJE_NAMES)]
 
     # Plot
     fig, ax = plt.subplots(figsize=(14, 6))
@@ -627,26 +385,10 @@ def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Fi
     Each kraj is assigned a unique color and tracked over time.
     Rank 1 = Most expensive.
     """
-    kraje_names = [
-        "Hlavní město Praha",
-        "Středočeský kraj",
-        "Jihočeský kraj",
-        "Plzeňský kraj",
-        "Karlovarský kraj",
-        "Ústecký kraj",
-        "Liberecký kraj",
-        "Královéhradecký kraj",
-        "Pardubický kraj",
-        "Vysočina",
-        "Jihomoravský kraj",
-        "Olomoucký kraj",
-        "Zlínský kraj",
-        "Moravskoslezský kraj",
-    ]
 
     # Filter for flats and only kraj-level regions
     kraje_df = (
-        avg_df[(avg_df["region"].isin(kraje_names)) & (avg_df["type"] == "Byty") & (avg_df["year"].between(2019, 2023))]
+        avg_df[(avg_df["region"].isin(KRAJE_NAMES)) & (avg_df["type"] == "Byty") & (avg_df["year"].between(2019, 2023))]
         .groupby(["region", "year"])["price"]
         .mean()
         .reset_index()
@@ -670,7 +412,7 @@ def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Fi
     ax.set_title("Kraje Ranking by Average Flat Prices (2019–2023)", fontsize=14)
     ax.set_xlabel("Year")
     ax.set_ylabel("Rank (1 = Most Expensive)")
-    ax.set_yticks(range(1, len(kraje_names) + 1))
+    ax.set_yticks(range(1, len(KRAJE_NAMES) + 1))
     ax.invert_yaxis()
     ax.grid(True)
     ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", fontsize="small", title="Kraj")
@@ -743,7 +485,6 @@ def plot_population_price_slope_chart(df: pd.DataFrame, show: bool = True) -> pl
 
 def main(show_plots: bool):
     avg_region_prices_df = load_csv_to_dataframe("data/csv/avg_prices_regions.csv")
-    ooh_df = load_csv_to_dataframe("data/csv/ooh_data.csv")
     regional_prices_df = load_csv_to_dataframe("data/csv/regional_prices.csv")
 
     q1_plot = plot_flat_prices_2023(avg_region_prices_df, show=show_plots)
