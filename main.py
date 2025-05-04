@@ -682,6 +682,65 @@ def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Fi
     return fig
 
 
+def plot_population_price_slope_chart(df: pd.DataFrame, show: bool = True) -> plt.Figure:
+    """
+    Plots a slope chart of average flat and house prices by population group
+    in a given region between 2019–2021 and 2021–2023.
+
+    Parameters:
+        df (pd.DataFrame): Input regional dataset with detailed price columns
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated slope chart figure
+    """
+    flat_cols = ["flat_price_2k", "flat_price_2k_10k", "flat_price_10k_50k", "flat_price_50k_plus"]
+    house_cols = ["house_price_2k", "house_price_2k_10k", "house_price_10k_50k", "house_price_50k_plus"]
+    all_cols = flat_cols + house_cols
+
+    # Filter and clean
+    region_df = df[
+        (df["region_name"] == "Středočeský kraj") & df["time_period"].isin(["2019-2021", "2021-2023"])
+    ].copy()
+    region_df[all_cols] = region_df[all_cols].replace("x", pd.NA).apply(pd.to_numeric, errors="coerce")
+
+    # Aggregate
+    avg = region_df.groupby("time_period")[all_cols].mean().T
+    avg.index = [
+        "Flat <2k",
+        "Flat 2k–10k",
+        "Flat 10k–50k",
+        "Flat 50k+",
+        "House <2k",
+        "House 2k–10k",
+        "House 10k–50k",
+        "House 50k+",
+    ]
+
+    # Reshape
+    slope_data = avg.T.reset_index().rename(columns={"index": "time_period"})
+    slope_data = slope_data.melt(id_vars="time_period", var_name="group", value_name="price")
+
+    # Plot
+    fig, ax = plt.subplots(figsize=(10, 6))
+    for group in slope_data["group"].unique():
+        subset = slope_data[slope_data["group"] == group]
+        ax.plot(subset["time_period"], subset["price"], marker="o", label=group)
+
+    ax.set_title(f"Price Change by Population Group in Středočeský kraj (2019–2023)", fontsize=14)
+    ax.set_ylabel("Average Price (CZK/m²)")
+    ax.set_xlabel("Time Period")
+    ax.set_xticks(["2019-2021", "2021-2023"])
+    ax.grid(True)
+    ax.legend(bbox_to_anchor=(1.02, 1), loc="upper left", title="Group")
+    plt.tight_layout()
+
+    if show:
+        plt.show()
+
+    return fig
+
+
 def main(show_plots: bool):
     avg_region_prices_df = load_csv_to_dataframe("data/csv/avg_prices_regions.csv")
     ooh_df = load_csv_to_dataframe("data/csv/ooh_data.csv")
@@ -694,6 +753,7 @@ def main(show_plots: bool):
     q5_plot = plot_growth_scatter_with_adjustments(avg_region_prices_df, show=show_plots)
     q6_plot = plot_house_price_shift_by_city_size(regional_prices_df, show=show_plots)
     q7_plot = plot_kraje_price_rankings(avg_region_prices_df, show=show_plots)
+    q8_plot = plot_population_price_slope_chart(regional_prices_df, show=show_plots)
 
     pdf_dir = "output/pdfs"
     png_dir = "output/pngs"
@@ -706,6 +766,7 @@ def main(show_plots: bool):
     save_figure_to_pdf(q5_plot, f"{pdf_dir}/growth_scatter.pdf")
     save_figure_to_pdf(q6_plot, f"{pdf_dir}/house_price_shift_by_city_size.pdf")
     save_figure_to_pdf(q7_plot, f"{pdf_dir}/kraje_price_rankings.pdf")
+    save_figure_to_pdf(q8_plot, f"{pdf_dir}/population_price_slope_chart.pdf")
 
     os.makedirs(png_dir, exist_ok=True)
     save_figure_to_png(q1_plot, f"{png_dir}/flat_prices_2023.png")
@@ -715,6 +776,7 @@ def main(show_plots: bool):
     save_figure_to_png(q5_plot, f"{png_dir}/growth_scatter.png")
     save_figure_to_png(q6_plot, f"{png_dir}/house_price_shift_by_city_size.png")
     save_figure_to_png(q7_plot, f"{png_dir}/kraje_price_rankings.png")
+    save_figure_to_png(q8_plot, f"{png_dir}/population_price_slope_chart.png")
 
 
 if __name__ == "__main__":
