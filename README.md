@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 ## Results
 
-All visual outputs are saved in the `outputs/` directory as `.png` or `.svg` files.
+All visual outputs are saved in the `output/` directory as `.png` or `.svg` files.
 
 ## License
 
