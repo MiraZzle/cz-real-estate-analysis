@@ -10,14 +10,16 @@ Data Source: [ČSÚ (Czech Statistical Office)](https://vdb.czso.cz/vdbvo2/faces
 
 The following questions are explored in this analysis and visualized using maps, heatmaps, and statistical plots:
 
-- Which regions had the highest average flat prices in 2023?
-- Which regions had the largest gap between house and flat prices?
-- Which regions saw the greatest percentage increase in property prices over time?
-- Correlation heatmap between different price bands (e.g., 2k–10k, 10k–50k) across regions
-- Which regions consistently had high prices across years (top 5 every year)?
-- Comparison of price trend stability across regions
-- Which regions show the highest disparity between house and flat prices?
-- Which regions have the most volatile property prices?
+| #   | Question                                                              |
+| --- | --------------------------------------------------------------------- |
+| Q1  | **Where was it most expensive to buy a flat in 2023?**                |
+| Q2  | **Which district grew the fastest in each region from 2019 to 2023?** |
+| Q3  | **Is post-COVID demand favouring smaller cities for houses?**         |
+| Q4  | **In which regions is the flat market the most uneven?**              |
+| Q5  | **Which regions became more or less expensive since 2019?**           |
+| Q6  | **How have prices changed across city sizes in Středočeský kraj?**    |
+| Q7  | **Was there a peak in flat prices — and if so, when?**                |
+| Q8  | **Are houses or flats gaining more value since 2019?**                |
 
 ## System Requirements
 
@@ -55,7 +57,7 @@ pip install -r requirements.txt
 2. Run the analysis:
 
    ```bash
-   python main.py
+   python main.py <optional_show_flag>
    ```
 
 3. Outputs (plots, graphs) will be saved to the `graphs/` directory.

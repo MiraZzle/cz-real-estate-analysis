@@ -3,8 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import geopandas as gpd
-import geojson
-import json
 import seaborn as sns
 import numpy as np
 import urllib.request as urllib2
@@ -21,6 +19,12 @@ def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
     """
     From raw avg_prices_regions.csv data, computes the top-growing district in each kraj
     based on percentual flat price growth (2019–2023).
+
+    Parameters:
+        data (pd.DataFrame): DataFrame containing average flat prices by region and year
+
+    Returns:
+        pd.DataFrame: DataFrame with the top-growing district in each kraj
     """
     lines = [line.strip() for line in KRAJ_DISTRICTS_RAW.strip().splitlines()]
     district_to_kraj = {}
@@ -78,10 +82,10 @@ def plot_growth_scatter_with_adjustments(df: pd.DataFrame, show: bool = True) ->
     ax.scatter(top3[2019], top3["growth_index"], color="crimson", s=80, zorder=3, edgecolors="black")
     x_range = x.max() - x.min()
 
-    # Annotate each point
+    # Annotate points
     for xi, yi, label, price, region in zip(x, y, labels, prices_2023, df["region"]):
-        dx, dy = 0, 1.5  # general upward shift
-        dx = 0.01 * x_range  # e.g., shift by ~100–200 CZK
+        dx, dy = 0, 1.5
+        dx = 0.01 * x_range
         if region == "Prachatice":
             dy = 2.5
         if region == "Jeseník":
@@ -131,6 +135,8 @@ def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -
     lines = [line.strip() for line in KRAJ_DISTRICTS_RAW.strip().splitlines()]
     district_to_kraj = {}
     current_kraj = None
+
+    # Map districts to regions
     for line in lines:
         if line == "Kraj Vysočina":
             current_kraj = line
@@ -307,7 +313,7 @@ def plot_flat_prices_2023(prices_df: pd.DataFrame, show: bool = True) -> plt.Fig
         value = df.loc[df["name"] == "Středočeský kraj", "TOTAL"].iloc[0]
         df = pd.concat([df, pd.DataFrame([{"name": "Hlavní město Praha", "TOTAL": value}])], ignore_index=True)
 
-    # Load GeoJSON
+    # Load Map
     url = "https://raw.githubusercontent.com/Plavit/Simple-Dash-Plotly-Map-Czech-Regions/main/maps/czech-regions-low-res.json"
     with urllib2.urlopen(url) as f:
         geo = gpd.read_file(f)
@@ -403,11 +409,6 @@ def plot_house_price_shift_by_city_size(regional_df: pd.DataFrame, show: bool = 
     return fig
 
 
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-
 def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
     Q: How does the average flat price ranking of regions change over time?
@@ -420,7 +421,7 @@ def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Fi
         matplotlib.figure.Figure: The generated line plot figure
     """
 
-    # Filter for flats and only kraj-level regions
+    # Filter for flats and only regions
     kraje_df = (
         avg_df[(avg_df["region"].isin(KRAJE_NAMES)) & (avg_df["type"] == "Byty") & (avg_df["year"].between(2019, 2023))]
         .groupby(["region", "year"])["price"]
@@ -492,7 +493,6 @@ def plot_population_price_slope_chart(df: pd.DataFrame, show: bool = True) -> pl
         "House 50k+",
     ]
 
-    # Reshape
     slope_data = avg.T.reset_index().rename(columns={"index": "time_period"})
     slope_data = slope_data.melt(id_vars="time_period", var_name="group", value_name="price")
 
