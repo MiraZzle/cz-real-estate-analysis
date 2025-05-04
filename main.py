@@ -51,12 +51,14 @@ def prepare_top_growing_districts(data: pd.DataFrame) -> pd.DataFrame:
 
 def plot_growth_scatter_with_adjustments(df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Scatter plot of top-growing districts per kraj.
-    - X: Flat price in 2019
-    - Y: Percentual growth (2019 = 100%)
-    - Highlights top 3 fastest-growing districts in red
-    - Annotates all points with 'kraj: district'
-    - Displays 2023 price below each point
+    Q: Which district grew the fastest in each kraj from 2019 to 2023??
+
+    Parameters:
+        df (pd.DataFrame): DataFrame containing average flat prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated scatter plot figure
     """
     fig, ax = plt.subplots(figsize=(12, 6))
     df = prepare_top_growing_districts(df)
@@ -117,9 +119,14 @@ def plot_growth_scatter_with_adjustments(df: pd.DataFrame, show: bool = True) ->
 
 def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Computes and plots the intra-kraj disparity in flat prices (max - min across districts)
-    for each Czech region based on avg_prices_regions.csv data.
-    Praha is shown but has no value.
+    Q: Which regions have the largest price disparities between their districts in 2023?
+
+    Parameters:
+        data (pd.DataFrame): DataFrame containing average flat prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated choropleth map figure
     """
     lines = [line.strip() for line in KRAJ_DISTRICTS_RAW.strip().splitlines()]
     district_to_kraj = {}
@@ -132,7 +139,6 @@ def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -
         else:
             district_to_kraj[line] = current_kraj
 
-    # --- Prepare data ---
     data = data.copy()
     data["kraj"] = data["region"].map(district_to_kraj)
 
@@ -153,14 +159,12 @@ def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -
         [disparity, pd.DataFrame([{"name": "Hlavní město Praha", "disparity": np.nan}])], ignore_index=True
     )
 
-    # --- Load Czech region map ---
     url = "https://raw.githubusercontent.com/Plavit/Simple-Dash-Plotly-Map-Czech-Regions/main/maps/czech-regions-low-res.json"
     with urllib2.urlopen(url) as f:
         geo = gpd.read_file(f)
 
     geo = geo.merge(disparity, on="name", how="left")
 
-    # --- Plot ---
     fig, ax = plt.subplots(figsize=(10, 6))
     geo.plot(
         column="disparity",
@@ -197,8 +201,14 @@ def plot_kraj_disparity_from_avg_prices(data: pd.DataFrame, show: bool = True) -
 
 def plot_growth_comparison_kraje(data: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Filters raw price data, computes normalized growth (2019–2023), and plots a grouped bar chart
-    for Czech kraje and Prague comparing flats and houses. Returns the Figure object.
+    How do flat vs house price growth compare across kraje from 2019 to 2023?
+
+    Parameters:
+        data (pd.DataFrame): DataFrame containing average flat prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated bar plot figure
     """
 
     # Filter for relevant years and types
@@ -221,7 +231,7 @@ def plot_growth_comparison_kraje(data: pd.DataFrame, show: bool = True) -> plt.F
     fig, ax = plt.subplots(figsize=(14, 6))
     sns.barplot(data=pivot, x="region", y="growth_index", hue="type", ax=ax)
 
-    ax.set_title("Percentual Price Growth by Region (2019–2023)")
+    ax.set_title("Percentual Price Growth by Region (2019 -> 2023)")
     ax.set_ylabel("Index (2019 = 100%)")
     ax.set_xlabel("Region")
     ax.set_xticklabels(ax.get_xticklabels(), rotation=45, ha="right")
@@ -238,8 +248,16 @@ def plot_price_growth_over_years(
     data: pd.DataFrame, property_type: str = "Byty", top_n: int = 10, show: bool = True
 ) -> plt.Figure:
     """
-    Plots the yearly price growth from 2019 to 2023 for the top N regions with the highest 2023 price
-    for a given property type ("Byty" or "Rodinné domy").
+    Q: Which regions saw the largest flat price growth year-by-year?
+
+    Parameters:
+        data (pd.DataFrame): DataFrame containing average flat prices by region and year
+        property_type (str): Type of property to filter for (default: "Byty")
+        top_n (int): Number of top regions to display (default: 10)
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated line plot figure
     """
     # Filter for the desired property type and years
     df_filtered = data[(data["type"] == property_type) & (data["year"].isin(range(2019, 2024)))]
@@ -272,8 +290,14 @@ def plot_price_growth_over_years(
 
 def plot_flat_prices_2023(prices_df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Plots a choropleth map of the Czech Republic showing average flat (Byty) prices in 2023.
-    Adds missing Praha if needed and displays price labels.
+    Q: Which regions had the highest average flat prices in 2023?
+
+    Parameters:
+        prices_df (pd.DataFrame): DataFrame containing average flat prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated choropleth map figure
     """
     # Filter only flat prices for 2023
     df = prices_df[(prices_df["type"] == "Byty") & (prices_df["year"] == 2023)].copy()
@@ -314,7 +338,7 @@ def plot_flat_prices_2023(prices_df: pd.DataFrame, show: bool = True) -> plt.Fig
             else:
                 ax.text(x, y, label, ha="center", va="center", fontsize=8, color=color, weight="bold")
 
-    ax.set_title("Average Flat Prices in Czech Regions (2023)", fontsize=14)
+    ax.set_title("Average Flat Price in 2023 by Region", fontsize=14)
     ax.axis("off")
 
     if show:
@@ -324,9 +348,14 @@ def plot_flat_prices_2023(prices_df: pd.DataFrame, show: bool = True) -> plt.Fig
 
 def plot_house_price_shift_by_city_size(regional_df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Compares house price distributions by city size before and after COVID.
-    Shows two boxplots side-by-side: one for 2019–2021 and one for 2021–2023.
-    City size is defined by population group.
+    Q: Have house prices grown faster in small vs large cities after COVID?
+
+    Parameters:
+        regional_df (pd.DataFrame): DataFrame containing house prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated boxplot figure
     """
     # Filter for the two time periods
     df_early = regional_df[regional_df["time_period"] == "2019-2021"]
@@ -381,9 +410,14 @@ import seaborn as sns
 
 def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Plots a ranking trajectory of Czech kraje based on average flat prices (2019–2023).
-    Each kraj is assigned a unique color and tracked over time.
-    Rank 1 = Most expensive.
+    Q: How does the average flat price ranking of regions change over time?
+
+    Parameters:
+        avg_df (pd.DataFrame): DataFrame containing average flat prices by region and year
+        show (bool): Whether to display the plot immediately
+
+    Returns:
+        matplotlib.figure.Figure: The generated line plot figure
     """
 
     # Filter for flats and only kraj-level regions
@@ -426,8 +460,7 @@ def plot_kraje_price_rankings(avg_df: pd.DataFrame, show: bool = True) -> plt.Fi
 
 def plot_population_price_slope_chart(df: pd.DataFrame, show: bool = True) -> plt.Figure:
     """
-    Plots a slope chart of average flat and house prices by population group
-    in a given region between 2019–2021 and 2021–2023.
+    Q: How have average flat and house prices changed for different population groups in Středočeský kraj?
 
     Parameters:
         df (pd.DataFrame): Input regional dataset with detailed price columns
