@@ -64,12 +64,7 @@ pip install -r requirements.txt
 
 ## Results
 
-All visual outputs are saved in the `graphs/` directory as `.png` or `.svg` files. These include:
-
-- Choropleth maps of property prices across the Czech Republic
-- Heatmaps of quarterly and annual trends
-- Line plots showing temporal trends per region
-- Correlation matrices and volatility measures
+All visual outputs are saved in the `outputs/` directory as `.png` or `.svg` files.
 
 ## License
 
